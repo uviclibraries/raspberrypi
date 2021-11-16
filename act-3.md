@@ -5,4 +5,4 @@ nav_order: 4
 parent: Workshop Activities
 ---
 
-button
+[NEXT STEP: CPU Temperature Monitor](act-4.html){: .btn .btn-blue }
