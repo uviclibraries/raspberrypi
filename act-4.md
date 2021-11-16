@@ -5,4 +5,4 @@ nav_order: 5
 parent: Workshop Activities
 ---
 
-[NEXT STEP: Setting Up a Raspberry Pi](act-1.html){: .btn .btn-blue }
+[NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
