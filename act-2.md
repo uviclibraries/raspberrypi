@@ -5,4 +5,4 @@ nav_order: 3
 parent: Workshop Activities
 ---
 
-button
+[NEXT STEP: Kiosk Computer](act-3.html){: .btn .btn-blue }
