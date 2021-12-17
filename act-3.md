@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Kiosk Computer
+title: 3-Kiosk Computer
 nav_order: 4
 parent: Workshop Activities
 ---
