@@ -5,8 +5,9 @@ nav_order: 10
 ---
 # Additional Resources & Acknowledgements
 
-## WORKSHOP NAME HERE Resources
+## Raspberry Pi Resources
 
+- **Coming Soon**
 
 ## Acknowledgements
 
