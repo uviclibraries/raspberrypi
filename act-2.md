@@ -11,9 +11,9 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Installing Necessary Software**
 
-1.  Install a copy of RetroPi at this site https://retropie.org.uk/download/ for the appropriate hardware.
+1.  Install a copy of RetroPi at [this site](https://retropie.org.uk/download/){:target="_blank"} for the appropriate hardware.
 2.  After getting the image, run etcher and load the image onto the microSD card.
-3.  This may take a while, so as it loads, go to this site asdfasdfasdfasdfasdfasdf to find some ROMs you’d like to play!
+3.  This may take a while, so as it loads, go to [this site](https://www.downloadroms.io/){:target="_blank"} to find some ROMs you’d like to play!
 4.  Once finished, insert the microSD into the RaspberryPi and turn it on
 5.  You will now configure the game controller, for this lab, we will use the keyboard.
 6.  TO SKIP OTHER STEPS hold down any already bound key. Continue doing this for keys not listed.
