@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Retro Pi
+title: 2-Retro Pi
 nav_order: 3
 parent: Workshop Activities
 ---
