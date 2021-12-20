@@ -9,7 +9,7 @@ parent: Workshop Activities
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
-<br>&nbsp;&nbsp;&nbsp;&nbsp;**Installing Needed AAASoftware**
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Installing Needed Software**
     
 1.  Open up a terminal shell, this can be done by clicking on this icon
     -   Alternatively, a new shell can be opened by pressing `crtl+alt+t`
