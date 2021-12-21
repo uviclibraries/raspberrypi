@@ -46,7 +46,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     
     -   Navigate around, you’ll see a taskbar at the top of the desktop with the Chromium web browser icon (see right). Try launching it!
         -   After launching the web browser, see if you can connect to **google.ca**
-        -   If you can, then your network settings are setup.
+        -   If you can, then your network settings are set up.
         -   Open this document in your browser on your Raspberry Pi so that you can click on the hyperlinks and copy and paste code from [this document](http://bit.ly/2MCdL7r){:target="_blank}
 
     <br>
