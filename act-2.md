@@ -5,7 +5,7 @@ nav_order: 3
 parent: Workshop Activities
 ---
 
-<img src="images/logo-2.png" alt="retro pi" style="float:right;width:180px;">
+<img src="images/act-2/logo-2.png" alt="retro pi" style="float:right;width:180px;">
 
 # Retro Gaming With RetroPi
 
