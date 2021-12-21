@@ -38,8 +38,8 @@ If you have any questions or get stuck as you work through this in-class exercis
         
         -   Open the terminal by clicking on the icon on the top bar (see icon on right).
         -   In the terminal enter this command & press enter: **sudo date -s “mm/dd/yyyy hh:mm”**
-            -   Example: **sudo date -s “01/28/2020 14:24”**
-        -   Once this is done, enter this command & press enter: **sudo apt-get update**
+            -   Example: `sudo date -s “01/28/2020 14:24”`
+        -   Once this is done, enter this command & press enter: `sudo apt-get update`
             -   Outside of workshop, you would want to upgrade as well, but that would take a long time so we will not!
     
     <img src="images/act-1/globe-logo.png" alt="globe icon" style="float:right;width:60px;">
@@ -53,30 +53,30 @@ If you have any questions or get stuck as you work through this in-class exercis
     **Installing New Software on Raspbian**
     
 7.  In a new terminal shell, we will install Python.
-8.  Enter the command **sudo apt-get install gimp**
+8.  Enter the command `sudo apt-get install gimp`
     
     <br>
     **Basic Python Programming, Hello World and Nano**
     
-9.  With Python installed, open the terminal and enter: **python3**
+9.  With Python installed, open the terminal and enter: `python3`
     -   A new prompt should show up “**\>\>\>**”. This is the Python shell.
-0.  In here simple Python commands can be executed. Try entering **x = 5**, then **y = 8**. These variables, x and y, are now set as the values 5 and 8.
-    -   Type in **x+y** and press enter
+0.  In here simple Python commands can be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
+    -   Type in `x+y` and press enter
     -   Try some other basic arithmetic commands with these variables!
-    -   When you’re done type: **exit()** and press enter.
+    -   When you’re done type: `exit()` and press enter.
 1.  In case we want to save a program, we need to be able to create new files. To do so, we will use nano.
-    -   Enter this command **sudo nano hello_world.py**
-    -   In the nano window, type in **message = ‘Hello, world!’** then on a new line **print(message)**.
-    -   Now, to save the file, enter the keystroke **ctrl+x**, then press **Y**, then **Enter**. You should now be back in the terminal.
-    -   From here, type in **python3 hello_world.py**
+    -   Enter this command `sudo nano hello_world.py`
+    -   In the nano window, type in `message = ‘Hello, world!’` then on a new line `print(message)`.
+    -   Now, to save the file, enter the keystroke `ctrl+x`, then press `Y`, then `Enter`. You should now be back in the terminal.
+    -   From here, type in `python3 hello_world.py`
 
     <br>
     **Extended Configuration**
     
-2.  In the case that you need to, or want to, edit any of the core settings of the Raspberry Pi, open a terminal and execute this command: **sudo raspi-config**
+2.  In the case that you need to, or want to, edit any of the core settings of the Raspberry Pi, open a terminal and execute this command: `sudo raspi-config`
 3.  There are multiple configuration options here, to learn more checkout [this website](https://elinux.org/RPi_raspi-config){:target="_blank"}
 4.  For an example of a useful feature, we will enable auto-login on the Raspberry Pi.
-    -   After executing **raspi-config** navigate to **Boot Options** and press **Enter**
+    -   After executing **raspi-config** (`sudo raspi-config`) navigate to **Boot Options** and press **Enter**
     -   Navigate to **Desktop/CLI** then to **Desktop Autologin** and **Enter**.
     -   You’ve now enabled autologin to the desktop.
     -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
@@ -96,7 +96,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     **Important Things:**
     
 7.  How to shutdown the Raspberry Pi
-    -   In the terminal, enter this command **sudo shutdown -h now**
+    -   In the terminal, enter this command `sudo shutdown -h now`
     -   After installing large applications, update and upgrade your raspberry pi **(ONLY UPGRADE WHEN YOU HAVE A LOT OF TIME)**
 
 [NEXT STEP: Retro Pi](act-2.html){: .btn .btn-blue }
