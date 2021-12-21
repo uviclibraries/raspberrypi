@@ -5,11 +5,15 @@ nav_order: 5
 parent: Workshop Activities
 ---
 
+<img src="images/act-4/logo-4.png" alt="logo" style="float:right;width:180px;">
+
 # Raspberry Pi CPU Temperature Log
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Installing Needed Software**
+    
+    <img src="images/act-4/command-line-logo.png" alt="console logo" style="float:right;width:180px;">
     
 1.  Open up a terminal shell, this can be done by clicking on this icon
     -   Alternatively, a new shell can be opened by pressing `crtl+alt+t`
