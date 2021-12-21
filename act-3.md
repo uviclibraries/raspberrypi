@@ -5,7 +5,7 @@ nav_order: 4
 parent: Workshop Activities
 ---
 
-<img src="images/act-3/logo-3.png" alt="kiosk" style="float:right;width:180px;">
+<img src="images/act-3/logo-3.png" alt="kiosk" style="float:right;width:240px;">
 
 # Kiosk Computer
 
