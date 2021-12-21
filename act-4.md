@@ -15,7 +15,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     <br>
     <img src="images/act-4/command-line-logo.png" alt="console logo" style="float:right;width:60px;">
     
-1.  Open up a terminal shell, this can be done by clicking on this icon
+1.  Open up a terminal shell, this can be done by clicking on this icon ->
     -   Alternatively, a new shell can be opened by pressing `crtl+alt+t`
 2.  Next, ensure that matplotlib is installed by entering the command `sudo apt-get install python3-matplotlib`
 3.  If it installs or confirms that matplotlib is installed, proceed to the next step.
