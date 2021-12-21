@@ -33,7 +33,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     -   When prompted, reboot your raspberry pi.
     -   Set the date and time on your raspberry pi:
         
-        <img src="images/act-1/command-line-logo.png" alt="console icon" style="float:right;width:6;">
+        <img src="images/act-1/command-line-logo.png" alt="console icon" style="float:right;width:60px;">
         
         -   Open the terminal by clicking on the icon on the top bar (see icon on right).
         -   In the terminal enter this command & press enter: **sudo date -s “mm/dd/yyyy hh:mm”**
@@ -41,7 +41,7 @@ If you have any questions or get stuck as you work through this in-class exercis
         -   Once this is done, enter this command & press enter: **sudo apt-get update**
             -   Outside of workshop, you would want to upgrade as well, but that would take a long time so we will not!
     
-    <img src="images/act-1/globe-logo.png" alt="globe icon" style="float:right;width:60;">
+    <img src="images/act-1/globe-logo.png" alt="globe icon" style="float:right;width:60px;">
     
     -   Navigate around, you’ll see a taskbar at the top of the desktop with the Chromium web browser icon (see right). Try launching it!
         -   After launching the web browser, see if you can connect to **google.ca**
