@@ -23,8 +23,10 @@ If you have any questions or get stuck as you work through this in-class exercis
     <br>
     **Creating the Python Script**
     
+    <img src="images/logo.png" alt="logo" style="float:right;width:60px;">
+    
 4.  Open a new blank Python file by **Menu > Programming > Mu**
-    -   The menu is the RaspberryPi logo in the top left.
+    -   The menu is the RaspberryPi logo to the right.
 5.  After launching Mu, select **Python 3** and click **OK**
 6.  In Mu, under the first commend enter in these lines of code:
 
