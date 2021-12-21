@@ -13,7 +13,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Installing Needed Software**
     <br>
-    <img src="images/act-4/command-line-logo.png" alt="console logo" style="float:right;width:180px;">
+    <img src="images/act-4/command-line-logo.png" alt="console logo" style="float:right;width:90px;">
     
 1.  Open up a terminal shell, this can be done by clicking on this icon
     -   Alternatively, a new shell can be opened by pressing `crtl+alt+t`
