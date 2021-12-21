@@ -33,7 +33,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     -   When prompted, reboot your raspberry pi.
     -   Set the date and time on your raspberry pi:
         
-        <img src="images/act-1/console-line-logo.png" alt="console icon" style="float:right;width:60;">
+        <img src="images/act-1/command-line-logo.png" alt="console icon" style="float:right;width:60;">
         
         -   Open the terminal by clicking on the icon on the top bar (see icon on right).
         -   In the terminal enter this command & press enter: **sudo date -s “mm/dd/yyyy hh:mm”**
