@@ -5,6 +5,8 @@ nav_order: 2
 parent: Workshop Activities
 ---
 
+<img src="images/logo.png" alt="logo" style="float:right;width:180px;">
+
 # Getting Setup
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
@@ -30,11 +32,17 @@ If you have any questions or get stuck as you work through this in-class exercis
     -   The first thing you’ll be prompted to do will be to set up a new password, for the purposes of this lab set the password to be **raspberry**, or skip this step.
     -   When prompted, reboot your raspberry pi.
     -   Set the date and time on your raspberry pi:
+        
+        <img src="images/act-1/console-line-logo.png" alt="console icon" style="float:right;width:60;">
+        
         -   Open the terminal by clicking on the icon on the top bar (see icon on right).
         -   In the terminal enter this command & press enter: **sudo date -s “mm/dd/yyyy hh:mm”**
             -   Example: **sudo date -s “01/28/2020 14:24”**
         -   Once this is done, enter this command & press enter: **sudo apt-get update**
             -   Outside of workshop, you would want to upgrade as well, but that would take a long time so we will not!
+    
+    <img src="images/act-1/globe-logo.png" alt="globe icon" style="float:right;width:60;">
+    
     -   Navigate around, you’ll see a taskbar at the top of the desktop with the Chromium web browser icon (see right). Try launching it!
         -   After launching the web browser, see if you can connect to **google.ca**
         -   If you can, then your network settings are setup.
