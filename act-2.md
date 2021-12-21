@@ -5,6 +5,8 @@ nav_order: 3
 parent: Workshop Activities
 ---
 
+<img src="images/logo-2.png" alt="retro pi" style="float:right;width:180px;">
+
 # Retro Gaming With RetroPi
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
