@@ -59,7 +59,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     **Basic Python Programming, Hello World and Nano**
     
 9.  With Python installed, open the terminal and enter: **python3**
-    -   A new prompt should show up “**\>\>\>**”. This is the Python shell.
+    -   A new prompt should show up “**\>\>\>**”.CHANGED This is the Python shell.
 0.  In here simple Python commands can be executed. Try entering **x = 5**, then **y = 8**. These variables, x and y, are now set as the values 5 and 8.
     -   Type in **x+y** and press enter
     -   Try some other basic arithmetic commands with these variables!
