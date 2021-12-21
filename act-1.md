@@ -14,7 +14,8 @@ If you have any questions or get stuck as you work through this in-class exercis
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Formatting the SD card and Installing Raspbian**
 
 1.  Open this document in your browser and so that you can click on the hyperlinks in the document:  http://bit.ly/2MCdL7r
-2.  Download a copy of **Raspbian Buster with Desktop** from the [Raspberry Pi website](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}  **Note:** if the download looks like it will take more than 5 minutes, ask your instructor for a thumb drive copy.
+2.  Download a copy of **Raspbian Buster with Desktop** from the [Raspberry Pi website](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}
+    -   **Note:** if the download looks like it will take more than 5 minutes, ask your instructor for a thumb drive copy.
 3.  Install the [Etcher disk imager](https://www.balena.io/etcher/){:target="_blank"} for Windows, Mac, and Linux on your computer
 4.  Using Etcher burn the disk image onto the SD card (If your computer does not have an SD card reader, you can borrow one from the Music and Media desk in the library):
     -   Put the SD card into the USB adapter/micro-adapter then into your computer.
