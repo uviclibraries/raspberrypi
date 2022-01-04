@@ -1,4 +1,4 @@
-# WORKSHOP Name goes here...
+# Introduction to Raspberry Pi
 ### UVic Libraries Digital Scholarship Commmons
 
 Link to workshop: https://nathanieljay.github.io/raspberryPi/
