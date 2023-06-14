@@ -30,8 +30,8 @@ At the end of this workshop, you will be able to:
 8.  Complete one or more of the following sample projects
     -   [Chromium Kiosk Computer](https://pimylifeup.com/raspberry-pi-kiosk/){:target="_blank"}
     -   [Spotify Jukebox](https://pimylifeup.com/raspberry-pi-spotify/){:target="_blank"}
-    -   [NearbyAirtraffic Tracker](https://pimylifeup.com/raspberry-pi-flightradar24/){:target="_blank"}
-    -   [Networkwide Ad blocker](https://pimylifeup.com/raspberry-pi-pi-hole/){:target="_blank"}
+    -   [Nearby Air Traffic Tracker](https://pimylifeup.com/raspberry-pi-flightradar24/){:target="_blank"}
+    -   [Network Wide Ad blocker](https://pimylifeup.com/raspberry-pi-pi-hole/){:target="_blank"}
     -   Personal Minecraft (or any other server provided game) server
  
 [NEXT STEP: Pre-Workshop Activities](pre-workshop.html){: .btn .btn-blue }
