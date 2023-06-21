@@ -7,7 +7,11 @@ nav_order: 10
 
 ## Raspberry Pi Resources
 
-- **Coming Soon**
+- [Official Raspberry Pi Website](https://www.raspberrypi.org/){:target="_blank"}
+- [Tutorials](https://www.raspberrypi.com/tutorials/){:target="_blank"}
+- [Discussion Forums](https://forums.raspberrypi.com/){:target="_blank"}
+- [Local Hobbyist Group in Victoria BC](https://vicpimakers.ca/about/){:target="_blank"}
+- [Find Resellers With Stock](https://rpilocator.com/){:target="_blank"}
 
 ## Acknowledgements
 
