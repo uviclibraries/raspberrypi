@@ -42,46 +42,46 @@ If you have any questions or get stuck as you work through this in-class exercis
         -   At this point, you can sign out of your email account for security reasons.
         -   In order for the Raspberry Pi to accesss archive.raspberrypi.org for updates and software while connected to the UVIC network, run the following command: `sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1`
         -   Once this is done, enter this command: `sudo apt-get update`
-            -   Outside of the workshop you would want to upgrade as well, but we will not as that will take a long time!
+            -   Outside of the workshop you would want to run `sudo apt-get upgrade` as well, but we will not as that will take a long time!
 
 ## Installing New Software on Raspbian
-7.  In a new terminal shell, we will install Python.
-8.  Enter the command `sudo apt-get install gimp`
-    
+7.  Enter the command: `sudo apt-get install <Software Name Here>`
+    -   Example: `sudo apt-get install gimp`
+8.  In a new terminal shell, we will install the Python interpreter: `sudo apt-get install python3`
+
 ## Introduction to Python Programming, Hello World and Nano
 9.  With Python installed, open the terminal and enter: `python3`
     -   A new prompt should show up “**\>\>\>**”. This is the Python shell.
-0.  In here simple Python commands can be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
-    -   Type in `x+y` and press enter
-    -   Try some other basic arithmetic commands with these variables!
-    -   When you’re done type: `exit()` and press enter.
-1.  In case we want to save a program, we need to be able to create new files. To do so, we will use nano.
-    -   Enter this command `sudo nano hello_world.py`
-    -   In the nano window, type in `message = ‘Hello, world!’` then on a new line `print(message)`.
-    -   Now, to save the file, enter the keystroke `ctrl+x`, then press `Y`, then `Enter`. You should now be back in the terminal.
-    -   From here, type in `python3 hello_world.py`
+10.  In here simple Python commands can be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
+     -   Type in `x+y` and press enter
+     -   Try some other basic arithmetic commands with these variables!
+     -   When you’re done type: `exit()` and press enter.
+11.  In case we want to save a program, we need to be able to create new files. To do so, we will use nano.
+     -   Enter this command `sudo nano hello_world.py`
+     -   In the nano window, type in `message = ‘Hello, world!’` then on a new line `print(message)`.
+     -   Now, to save the file, enter the keystroke `ctrl+x`, then press `Y`, then `Enter`. You should now be back in the terminal.
+     -   From here, type in `python3 hello_world.py`
 
 ## Extended Configuration
-2.  In the case that you need to, or want to, edit any of the core settings of the Raspberry Pi, open a terminal and execute this command: `sudo raspi-config`
-3.  There are multiple configuration options here, to learn more checkout [this website](https://elinux.org/RPi_raspi-config){:target="_blank"}
-4.  For an example of a useful feature, we will enable auto-login on the Raspberry Pi.
-    -   After executing **raspi-config** (`sudo raspi-config`) navigate to **Boot Options** and press **Enter**
-    -   Navigate to **Desktop/CLI** then to **Desktop Autologin** and **Enter**.
-    -   You’ve now enabled autologin to the desktop.
-    -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
+12.  In the case that you need to, or want to, edit any of the core settings of the Raspberry Pi, open a terminal and execute this command: `sudo raspi-config`
+13.  There are multiple configuration options here, to learn more checkout [this website](https://elinux.org/RPi_raspi-config){:target="_blank"}
+14.  For an example of a useful feature, we will enable auto-login on the Raspberry Pi.
+     -   After executing **raspi-config** (`sudo raspi-config`) navigate to **Boot Options** and press **Enter**
+     -   Navigate to **Desktop/CLI** then to **Desktop Autologin** and **Enter**.
+     -   You’ve now enabled autologin to the desktop.
+     -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
 
 ## Projects
-5.  Pick some projects!
-    -   [Kiosk Computer](http://bit.ly/2ryOD9G){:target="_blank"}
-    -   [Temp Log](http://bit.ly/38NjrnG){:target="_blank"}
-    -   [Headless RbPi](http://bit.ly/3afHkoH){:target="_blank"}
-    -   [Lakka Retro Gaming Computer](http://bit.ly/33CDwL7){:target="_blank"}
-    -   [C64 Disk Hack](http://bit.ly/2O7ajSP){:target="_blank"}
-    -   Or go to **Start Menu > Help > Projects** on the Raspberry Pi to view a list of projects in the Chromium web browser.
+15.  Pick some projects!
+     -   [Kiosk Computer](http://bit.ly/2ryOD9G){:target="_blank"}
+     -   [Temp Log](http://bit.ly/38NjrnG){:target="_blank"}
+     -   [Headless RbPi](http://bit.ly/3afHkoH){:target="_blank"}
+     -   [Lakka Retro Gaming Computer](http://bit.ly/33CDwL7){:target="_blank"}
+     -   [C64 Disk Hack](http://bit.ly/2O7ajSP){:target="_blank"}
+     -   Or go to **Start Menu > Help > Projects** on the Raspberry Pi to view a list of projects in the Chromium web browser.
 
 ## Important Notes
-8.  How to shutdown the Raspberry Pi
-    -   In the terminal, enter this command `sudo shutdown -h now`
-    -   After installing large applications, update and upgrade your raspberry pi **(ONLY UPGRADE WHEN YOU HAVE A LOT OF TIME)**
+16.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
+17.  Shut down the Raspberry Pi: `sudo shutdown -h now`
 
 [NEXT STEP: Retro Pi](act-2.html){: .btn .btn-blue }
