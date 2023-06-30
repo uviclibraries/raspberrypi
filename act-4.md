@@ -11,14 +11,13 @@ parent: Workshop Activities
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
-&nbsp;&nbsp;&nbsp;&nbsp;**Installing Needed Software** 
+## Installing The Necessary Software 
 1.  Open up a terminal shell, this can be done by clicking on its icon (see right) <img src="images/act-4/command-line-logo.png" alt="console logo" style="float:right;width:60px;">
     -   Alternatively, a new shell can be opened by pressing `crtl+alt+t`
 2.  Next, ensure that matplotlib is installed by entering the command `sudo apt-get install python3-matplotlib`
 3.  If it installs or confirms that matplotlib is installed, proceed to the next step.
 
-    **Creating the Python Script**
-    <img src="images/logo.png" alt="logo" style="float:right;width:60px;">
+## Creating The Python Script <img src="images/logo.png" alt="logo" style="float:right;width:60px;">
 4.  Open a new blank Python file by **Menu > Programming > Mu**
     -   The menu is the RaspberryPi logo to the right.
 5.  After launching Mu, select **Python 3** and click **OK**
@@ -78,7 +77,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 3.  Save and run this script to get a graph of the current cpu temperature.
 
-    **Automating the Script**
+## Run on Startup
 4.  This Python script can be made to run automatically on boot.
 5.  Open a new terminal and enter in `crontab -e` to open crontab
     -   If prompted, choose nano from the options given
