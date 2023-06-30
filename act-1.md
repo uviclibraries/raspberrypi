@@ -39,7 +39,7 @@ If you have any questions or get stuck as you work through this in-class exercis
         -   Enter your email address and agree to the terms and conditions. You will be given 15 minutes of access to complete the registration.
         -   Log into the same email account on the Raspberry Pi. Note that Google Gmail could be very slow to respond on a Raspberry Pi 3, but will still work.
         -   Click the link at the top of the automatically sent email to complete the registration.
-        -   At this point, sign out of your email account for security reasons.
+        -   At this point, you can sign out of your email account for security reasons.
         -   Once this is done, enter this command & press enter: `sudo apt-get update`
             -   Outside of the workshop you would want to upgrade as well, but we will not as that will take a long time!
 
@@ -74,12 +74,12 @@ If you have any questions or get stuck as you work through this in-class exercis
     -   [Kiosk Computer](http://bit.ly/2ryOD9G){:target="_blank"}
     -   [Temp Log](http://bit.ly/38NjrnG){:target="_blank"}
     -   [Headless RbPi](http://bit.ly/3afHkoH){:target="_blank"}
-6.  At Home projects
     -   [Lakka Retro Gaming Computer](http://bit.ly/33CDwL7){:target="_blank"}
     -   [C64 Disk Hack](http://bit.ly/2O7ajSP){:target="_blank"}
+    -   Or go to **Start Menu > Help > Projects** on the Raspberry Pi to view a list of projects in the Chromium web browser.
 
     **Important Things:**
-7.  How to shutdown the Raspberry Pi
+8.  How to shutdown the Raspberry Pi
     -   In the terminal, enter this command `sudo shutdown -h now`
     -   After installing large applications, update and upgrade your raspberry pi **(ONLY UPGRADE WHEN YOU HAVE A LOT OF TIME)**
 
