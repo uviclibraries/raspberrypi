@@ -30,7 +30,7 @@ If you have any questions or get stuck as you work through this in-class exercis
     -   When prompted, reboot your raspberry pi.
     -   Set the date and time on your raspberry pi: <img src="images/act-1/command-line-logo.png" alt="console icon" style="float:right;width:60px;">
         -   Open the terminal by clicking on the icon on the top bar (see icon on right).
-        -   In the terminal enter this command & press enter: **sudo date -s 'mm/dd/yyyy hh:mm:ss'**
+        -   In the terminal enter this command with the date and time then press enter: `sudo date -s 'mm/dd/yyyy hh:mm:ss'`
             -   Example: `sudo date -s '06/30/2023 11:40:00'`
     -   Connect to the internet through UVIC Guest WIFI:
         -   Click on the WIFI icon on the top bar and select "UVicStart". This will connect the Raspberry Pi to the UVIC network as a guest.
@@ -41,7 +41,7 @@ If you have any questions or get stuck as you work through this in-class exercis
         -   Click the link at the top of the automatically sent email to complete the registration.
         -   At this point, you can sign out of your email account for security reasons.
         -   In order for the Raspberry Pi to accesss archive.raspberrypi.org for updates and software while connected to the UVIC network, run the following command: `sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1`
-        -   Once this is done, enter this command & press enter: `sudo apt-get update`
+        -   Once this is done, enter this command: `sudo apt-get update`
             -   Outside of the workshop you would want to upgrade as well, but we will not as that will take a long time!
 
 ## Installing New Software on Raspbian
