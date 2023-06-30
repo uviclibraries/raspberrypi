@@ -10,8 +10,8 @@ parent: Workshop Activities
 # Getting Setup
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
-**Formatting the SD card and Installing Raspbian**
-1.  Open this document in your browser and so that you can click on the hyperlinks in the document:  http://bit.ly/2MCdL7r
+&nbsp;&nbsp;&nbsp;&nbsp;**Formatting the SD card and Installing Raspbian**
+1.  Open this document in your browser and so that you can click on the hyperlinks in the document: http://bit.ly/2MCdL7r
 2.  Download a copy of **Raspbian Buster with Desktop** from the [Raspberry Pi website](https://www.raspberrypi.org/downloads/raspbian/){:target="_blank"}
     -   **Note:** if the download looks like it will take more than 5 minutes, ask your instructor for a thumb drive copy.
 3.  Install this [Etcher disk imager](https://www.balena.io/etcher/){:target="_blank"} for Windows, Mac, and Linux on your computer
