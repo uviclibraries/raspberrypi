@@ -14,5 +14,6 @@ If you have any questions or get stuck as you work through this in-class exercis
 ## Register For The Google API
 1.  Log into the [Google Console Actions Dashboard](https://console.actions.google.com/){:target="_blank"} with your Google account.
 2.  Click "New project", enter a name for the project and the country and language, then click "Create project".
-3.  Go to the [Google Cloud Console](https://console.actions.google.com/){:target="_blank"}
-4.  
+3.  Click "Device registration" and keep this tab open to 
+4.  Go to the [Google Cloud Console](https://console.cloud.google.com/apis/library/embeddedassistant.googleapis.com){:target="_blank"}, select the current project, and click "Enable".
+5.  
