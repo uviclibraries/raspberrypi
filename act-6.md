@@ -28,11 +28,11 @@ If you have any questions or get stuck as you work through this in-class exercis
 10.  If the credentials JSON file needs to be downloaded again, click the icon with three dots on the right of the list entry. <img src="images/act-6/model-options.png" alt="model options" style="float:center;">
 
 ## Raspberry Pi Installation
-11.  Find a USB microphone and an audio jack speaker to connect to the Raspberry Pi.
+11.  Find a USB microphone and an audio jack speaker or headphones and connect them to the Raspberry Pi.
 12.  Test the microphone and speaker by entering the terminal command `arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw` to record 5 seconds of audio and `aplay --format=S16_LE --rate=16000 out.raw` to replay the audio.
 13.  Create a folder named `google_assistant` in the `/home/pi` directory. Rename the JSON file downloaded earlier to `credentials.json` and move it to this folder using a USB drive or by directly downloading the file to the Raspberry Pi from Chromium. Note that `/home/pi` assumes a username "pi" and should be corrected to the actual username if it is different.
 14.  Before attempting any installations on the Raspberry Pi while connected to the UVIC network, ensure the correct time has been set and IPV6 is disabled as outlined in [activity 1](https://uviclibraries.github.io/raspberrypi/act-1.html){:target="_blank"}.
-15.  Set up and activate the Python virual environment:
+15.  Set up and activate the Python virtual environment:
      ```
      sudo apt-get update
      sudo apt-get install python3-dev python3-venv
@@ -41,7 +41,7 @@ If you have any questions or get stuck as you work through this in-class exercis
      source env/bin/activate
      ```
 16.  Install the Google Assistant dependencies: `sudo apt-get install portaudio19-dev libffi-dev libssl-dev`
-17.  Install the Google Assistant library with working examples: `python -m pip install --upgrade google-assistant-sdk[samples]`
+17.  Install the Google Assistant library and example applications: `python -m pip install --upgrade google-assistant-sdk[samples]`
 18.  Install the Google Authorization Tool: `python -m pip install --upgrade google-auth-oauthlib[tool]`
 19.  Because of issues with the current release of the Google Assistant as of writing, these extra steps were required:
      -   Ensure the dependency Tenacity is installed: `sudo pip install -U tenacity`
@@ -50,5 +50,9 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   The line `buf = arr.tostring()` needs to be `buf = arr.tobytes()` instead.
      -   Press "ctrl" and "X" then "Y" to save and exit.
 21.  Generate the credentials: `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --client-secrets ~/google_assistant/credentials.json`
-22.  Chromium will automatically open and prompt you to sign in with your Google account. Press "Continue" for giving the Google Assistant access to your account. The output in the terminal should say: `credentials saved: /home/pi/.config/google-oauthlib-tool/credentials.json`
-23. 
+22.  Chromium will automatically open and prompt you to sign in with your Google account. Press "Continue" to give the Google Assistant access to your account. The last line of output in the terminal should say: `credentials saved: /home/pi/.config/google-oauthlib-tool/credentials.json`
+23.  Run the Google Assistant application and try talking to it: `googlesamples-assistant-pushtotalk`
+24.  To close the application, press "ctrl" and "C" twice.
+
+## Wake Word
+25.  
