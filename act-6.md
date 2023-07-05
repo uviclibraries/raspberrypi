@@ -40,9 +40,15 @@ If you have any questions or get stuck as you work through this in-class exercis
      env/bin/python -m pip install --upgrade pip setuptools wheel
      source env/bin/activate
      ```
-16. Install the Google Assistant dependencies: `sudo apt-get install portaudio19-dev libffi-dev libssl-dev`
-17. Install the Google Assistant library with working examples: `python -m pip install --upgrade google-assistant-sdk[samples]`
-18. Install the Google Authorization Tool: `python -m pip install --upgrade google-auth-oauthlib[tool]`
-19. Generate the credentials: `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --client-secrets ~/google_assistant/credentials.json`
-20. Chromium will automatically open and prompt you to sign in with your Google account. Press "Continue" for giving the Google Assistant access to your account. The output in the terminal should say: `credentials saved: /home/pi/.config/google-oauthlib-tool/credentials.json`
-21. 
+16.  Install the Google Assistant dependencies: `sudo apt-get install portaudio19-dev libffi-dev libssl-dev`
+17.  Install the Google Assistant library with working examples: `python -m pip install --upgrade google-assistant-sdk[samples]`
+18.  Install the Google Authorization Tool: `python -m pip install --upgrade google-auth-oauthlib[tool]`
+19.  Because of issues with the current release of the Google Assistant as of writing, these extra steps were required:
+     -   Ensure the dependency Tenacity is installed: `sudo pip install -U tenacity`
+     -   A Python file needs to be edited: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/grpc/audio_helpers.py`
+     -   Go to line 57 by pressing "ctrl" and "-" then entering 57.
+     -   The line `buf = arr.tostring()` needs to be `buf = arr.tobytes()` instead.
+     -   Press "ctrl" and "X" then "Y" to save and exit.
+21.  Generate the credentials: `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --client-secrets ~/google_assistant/credentials.json`
+22.  Chromium will automatically open and prompt you to sign in with your Google account. Press "Continue" for giving the Google Assistant access to your account. The output in the terminal should say: `credentials saved: /home/pi/.config/google-oauthlib-tool/credentials.json`
+23. 
