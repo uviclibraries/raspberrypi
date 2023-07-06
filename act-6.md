@@ -11,7 +11,8 @@ parent: Workshop Activities
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
- ## Register For The Google API
+## Register For The Google API
+
 1.  Log into the [Google Console Actions Dashboard](https://console.actions.google.com/){:target="_blank"} with your Google account (it is much faster to use your own computer and not Chromium on the Raspberry Pi).
 2.  Click "New project", enter a name for the project and the country and language, then click "Create project".
 3.  Click "Device registration" or the link after "Are you looking for device registration?" and keep this tab open.
@@ -27,7 +28,8 @@ If you have any questions or get stuck as you work through this in-class exercis
 9.  If the model needs to be edited, click its entry on the list.
 10.  If the credentials JSON file needs to be downloaded again, click the icon with three dots on the right of the list entry. <img src="images/act-6/model-options.png" alt="model options" style="float:center;">
 
- ## Raspberry Pi Installation
+## Raspberry Pi Installation
+
 11.  Find a USB microphone and an audio jack speaker or headphones and connect them to the Raspberry Pi. <br> <img src="images/act-6/raspberry-pi.png" alt="model options" style="float:center;width:240px;"> <img src="images/act-6/microphone.png" alt="model options" style="float:center;width:240px;">
 12.  Test the microphone and speaker by entering the terminal command `arecord --format=S16_LE --duration=5 --rate=16000 --file-type=raw out.raw` to record 5 seconds of audio and `aplay --format=S16_LE --rate=16000 out.raw` to replay the audio.
 13.  Create a folder named `google_assistant` in the `/home/pi` directory. Rename the JSON file downloaded earlier to `credentials.json` and move it to this folder using a USB drive or by directly downloading the file to the Raspberry Pi from Chromium. Note that `/home/pi` assumes a username "pi" and should be corrected to the actual username if it is different.
@@ -55,11 +57,13 @@ If you have any questions or get stuck as you work through this in-class exercis
 23.  Press the enter key and try talking into the microphone.
 24.  To close the application, press "ctrl" and "C" twice.
 
- ## "Ok Google..."
+## "Ok Google..."
+
 25.  In order for the hot word version of the Google Assistant to run, another Python file needs to be edited: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
 26.  Go to line 65 and change `with Assistant(credentials) as assistant:` to `with Assistant(credentials, "device-model-id") as assistant:` where `device-model-id` should be the model ID from the Actions Console, then save and exit.
 27.  Run the hot word application: `googlesamples-assistant-hotword`
 28.  Say "Ok Google" followed by any query or request into the microphone.
 
- ## Electronics and Voice Control
+## Electronics and Voice Control
+
 29.  
