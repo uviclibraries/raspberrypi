@@ -28,13 +28,13 @@ If you have any questions or get stuck as you work through this in-class exercis
 6.  With all peripherals installed, allow the Raspberry Pi to boot into the desktop.
     -   The first thing you’ll be prompted to do will be to set up a new password, for the purposes of this lab set the password to be **raspberry**, or skip this step.
     -   When prompted, reboot your raspberry pi.
-    -   Set the date and time on your raspberry pi: <img src="images/act-1/command-line-logo.png" alt="console icon" style="float:right;width:60px;">
+    -   Set the date and time on your raspberry pi: <img src="images/act-1/terminal-icon.png" alt="console icon" style="float:right;width:60px;">
         -   Open the terminal by clicking on the icon on the top bar (see icon on right).
         -   In the terminal enter this command with the date and time then press enter: `sudo date -s 'mm/dd/yyyy hh:mm:ss'`
             -   Example: `sudo date -s '06/30/2023 11:40:00'`
     -   Connect to the internet through UVIC Guest WIFI:
         -   Click on the WIFI icon on the top bar and select "UVicStart". This will connect the Raspberry Pi to the UVIC network as a guest.
-        -   Upon opening the Chromium web browser, the UVicStart Guest Wireless page should open. <img src="images/act-1/globe-logo.png" alt="globe icon" style="float:right;width:60px;">
+        -   Upon opening the Chromium web browser, the UVicStart Guest Wireless page should open. <img src="images/act-1/chromium-icon.png" alt="globe icon" style="float:right;width:60px;">
         -   Click the "REGISTER" button.
         -   Enter your email address and agree to the terms and conditions. You will be given 15 minutes of access to complete the registration.
         -   Log into the same email account on the Raspberry Pi. Note that Google Gmail could be very slow to respond on a Raspberry Pi 3, but will still work.
@@ -71,17 +71,17 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   You’ve now enabled autologin to the desktop.
      -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
 
-## Projects
-15.  Pick some projects!
-     -   [Kiosk Computer](http://bit.ly/2ryOD9G){:target="_blank"}
-     -   [Temp Log](http://bit.ly/38NjrnG){:target="_blank"}
-     -   [Headless RbPi](http://bit.ly/3afHkoH){:target="_blank"}
-     -   [Lakka Retro Gaming Computer](http://bit.ly/33CDwL7){:target="_blank"}
-     -   [C64 Disk Hack](http://bit.ly/2O7ajSP){:target="_blank"}
-     -   Or go to **Start Menu > Help > Projects** on the Raspberry Pi to view a list of projects in the Chromium web browser.
-
 ## Important Notes
-16.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
-17.  Shut down the Raspberry Pi: `sudo shutdown -h now`
+15.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
+16.  Shut down the Raspberry Pi: `sudo shutdown -h now`
+
+## Projects
+Pick some projects!
+   -   [Kiosk Computer](http://bit.ly/2ryOD9G){:target="_blank"}
+   -   [Temp Log](http://bit.ly/38NjrnG){:target="_blank"}
+   -   [Headless RbPi](http://bit.ly/3afHkoH){:target="_blank"}
+   -   [Lakka Retro Gaming Computer](http://bit.ly/33CDwL7){:target="_blank"}
+   -   [C64 Disk Hack](http://bit.ly/2O7ajSP){:target="_blank"}
+   -   Or go to **Start Menu > Help > Projects** on the Raspberry Pi to view a list of projects in the Chromium web browser.
 
 [NEXT STEP: Retro Pi](act-2.html){: .btn .btn-blue }
