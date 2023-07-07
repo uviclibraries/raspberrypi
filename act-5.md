@@ -30,4 +30,6 @@ If you have any questions or get stuck as you work through this in-class exercis
 3. Save and exit by pressing "ctrl" and "X" then "Y".
 4. Connect an LED in series with a resistor between GPIO pin 14 and ground.
 5. Run the Python script and watch the LED blink on and off every one second: `python3 blink.py`
-6. 
+6. Press "ctrl" and "C" to exit the program.
+
+## ???
