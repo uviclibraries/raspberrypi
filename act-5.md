@@ -29,13 +29,17 @@ If you have any questions or get stuck as you work through this in-class exercis
         gpio.output(pin, gpio.LOW)
         sleep(1)
     ```
-4.  Save and exit by pressing "ctrl" and "X" then "Y".
-5.  Run the program and watch the LED blink on and off: `python3 blink.py`
-6.  Press "ctrl" and "C" to exit the program.
-7.  Note that exiting while the LED is on will cause it to stay on.
+    The pin numbering is set to the Broadcom CPU's definitions with `gpio.setmode(gpio.BCM)` and pin 25 is initialized as an output with `gpio.setup(pin, gpio.OUT)`<br>
+    GPIO pins can be in one of two states:
+    -   0V (ground): `gpio.LOW`
+    -   3.3V: `gpio.HIGH`
+5.  Save and exit by pressing "ctrl" and "X" then "Y".
+6.  Run the program and watch the LED blink on and off: `python3 blink.py`
+7.  Press "ctrl" and "C" to exit the program.
+8.  Note that exiting while the LED is on will cause it to stay on.
 
 ## Push Button
-8.  Connect a momentary push button in series with a 10k&Omega; resistor between GPIO pin 25 and 3.3 volt power. <br><img src="images/act-5/pi-button-diagram.png" alt="button" style="float:center;width:480px;">
+8.  Connect a momentary push button in series with a 10k&Omega; resistor between GPIO pin 25 and 3.3V power. <br><img src="images/act-5/pi-button-diagram.png" alt="button" style="float:center;width:480px;">
 9.  Create a Python file named `button.py` and enter the following:
     ```
     import RPi.GPIO as gpio
@@ -48,5 +52,27 @@ If you have any questions or get stuck as you work through this in-class exercis
         if gpio.input(pin) == gpio.HIGH:
             print("Button Pushed")
     ```
+    The new parameter `pull_up_down=gpio.PUD_DOWN` connects the pin to ground with a very high value resistor internally.
 10.  Run the program and then press the button. The terminal should be filled with "Button Pushed" due to the while loop repeating many times per second.
-11.  
+11.  In some cases, a more useful approach to GPIO input is callbacks. These work by interrupting the program to call a function. In this example, `buttonPressedCallback` will interrupt a counting process:
+     ```
+     import RPi.GPIO as gpio
+     from time import sleep
+
+     def buttonPressedCallback(channel):
+         print("Pressed")
+
+     pin = 25
+     gpio.setmode(gpio.BCM)
+     gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
+     gpio.add_event_detect(pin, gpio.RISING, callback=buttonPressedCallback)
+     i = 0
+     
+     while True:
+         print(i)
+         i = i + 1
+         sleep(1)
+     ```
+     The parameter `gpio.RISING` specifies calling the function when the state changes from low to high. Alternatively, `gpio.FALLING` could have beem used for high to low or `gpio.BOTH` for either case.
+
+## Pulse Width Modulation
