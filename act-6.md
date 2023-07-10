@@ -41,9 +41,9 @@ If you have any questions or get stuck as you work through this in-class exercis
      source env/bin/activate
      ```
 16.  Install the Google Assistant dependencies: `sudo apt-get install portaudio19-dev libffi-dev libssl-dev`
-17.  Install the Google Assistant library and example applications: `python -m pip install --upgrade google-assistant-sdk[samples]`
+17.  Install the Google Assistant library and example programs (this installation might take a while): `python -m pip install --upgrade google-assistant-sdk[samples]`
 18.  Install the Google Authorization Tool: `python -m pip install --upgrade google-auth-oauthlib[tool]`
-19.  Because of issues with the current release of the Google Assistant as of writing, these extra steps were required:
+19.  Because of issues with the current release of the Google Assistant as of writing, these fixes were required:
      -   Ensure the dependency Tenacity is installed: `sudo pip install -U tenacity`
      -   A Python file needs to be edited: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/grpc/audio_helpers.py`
      -   Go to line 57 by pressing "ctrl" and "-" then entering 57.
@@ -51,35 +51,35 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   Press "ctrl" and "X" then "Y" to save and exit.
 20.  Generate the credentials: `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --client-secrets ~/google_assistant/credentials.json`
 21.  Chromium will automatically open and prompt you to sign in with your Google account. Press "Continue" to give the Google Assistant access to your account. The last line of output in the terminal should say: `credentials saved: /home/pi/.config/google-oauthlib-tool/credentials.json`
-22.  Run the Google Assistant application: `googlesamples-assistant-pushtotalk`
+22.  Run the Google Assistant program: `googlesamples-assistant-pushtotalk`
 23.  Press the enter key and try talking into the microphone.
-24.  To close the application, press "ctrl" and "C" twice.
+24.  To close the program, press "ctrl" and "C" twice.
 
 ## "Ok Google..."
-25.  In order for the hot word version of the Google Assistant to run, another Python file needs to be edited: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
-26.  Go to line 65 and change `with Assistant(credentials) as assistant:` to `with Assistant(credentials, "device-model-id") as assistant:` where `device-model-id` should be the model ID from the Actions Console, then save and exit.
-27.  Run the hot word application: `googlesamples-assistant-hotword`
+25.  In order for the hot word version of the Google Assistant to run properly, another Python file needs to be edited: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
+26.  Go to line 65 and change `with Assistant(credentials) as assistant:` to `with Assistant(credentials, "device-model-id") as assistant:` where `device-model-id` should be the model ID from the Actions Console. Save and exit.
+27.  Run the hot word program: `googlesamples-assistant-hotword`
 28.  Say "Ok Google" followed by any query or request into the microphone.
 
 ## Electronics and Voice Control
-29.  Install the GPIO library to the Python environment: `sudo pip install RPi.GPIO`
-30.  Open the hot word file again: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
-31.  Near the top of the file right below the `from` and `import` statements, add the line: `import RPi.GPIO as GPIO`
-32.  Add these lines the start of the `def main():` method:
+29.  Connect an LED in series with a resistor between GPIO pin 25 and ground. <br><img src="images/act-5/pi-blink-diagram.png" alt="blink" style="float:center;width:480px;">
+30.  Install the GPIO library to the Python environment: `sudo pip install RPi.GPIO`
+31.  Open the hot word file again: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
+32.  Near the top of the file right below the `from` and `import` statements, add the line: `import RPi.GPIO as gpio`
+33.  Add these lines to the start of the `def main():` method:
      ```
-     GPIO.setmode(GPIO.BCM)
-     GPIO.setup(14, GPIO.OUT)
+     gpio.setmode(gpio.BCM)
+     gpio.setup(25, gpio.OUT)
      ```
-     This sets the GPIO pin numbering to the Broadcom CPU's definitions and assigns pin 14 to be an output.
-33.  Add these lines to the end of the `def process_event(event):` method:
+     This sets the GPIO pin numbering to the Broadcom CPU's definitions and assigns pin 25 to be an output.
+34.  Add these lines to the end of the `def process_event(event):` method:
      ```
      if event.type == EventType.ON_CONVERSATION_TURN_STARTED:
-         GPIO.output(14, GPIO.HIGH)
+         gpio.output(25, gpio.HIGH)
 
      if event.type == EventType.ON_CONVERSATION_TURN_STARTED or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT or event.type == EventType.ON_NO_RESPONSE:
-         GPIO.output(14, GPIO.LOW)
+         gpio.output(25, gpio.LOW)
      ```
      Then save and exit.
-34.  Connect an LED in series with a resistor between GPIO pin 14 and ground.
-35.  When using the hot word application, the LED should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
+35.  When using the hot word program, the LED should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
 36.  
