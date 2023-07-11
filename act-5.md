@@ -52,7 +52,7 @@ If you have any questions or get stuck as you work through this in-class exercis
         if gpio.input(pin) == gpio.HIGH:
             print("Button Pushed")
     ```
-    The new parameter `pull_up_down=gpio.PUD_DOWN` connects the pin to ground with a very high value resistor internally.
+    The new parameter `pull_up_down=gpio.PUD_DOWN` will internally connect the pin to ground with a very high value resistor.
 10.  Run the program and then press the button. The terminal should be filled with "Button Pushed" due to the while loop repeating many times per second.
 11.  In some cases, a more useful approach to GPIO input is callbacks. These work by interrupting the program to call a function. In this example, `buttonPressedCallback` will interrupt a counting process:
      ```
@@ -76,3 +76,31 @@ If you have any questions or get stuck as you work through this in-class exercis
      The parameter `gpio.RISING` specifies calling the function when the state changes from low to high. Alternatively, `gpio.FALLING` could have beem used for high to low or `gpio.BOTH` for either case.
 
 ## Pulse Width Modulation
+12.  Connect an LED to pin 25 like in the blink example.
+13.  Create a Python file named `fade.py` and enter the following:
+     ```
+     import RPi.GPIO as gpio
+     from time import sleep
+
+     pin = 25
+     gpio.setmode(gpio.BCM)
+     gpio.setup(pin, gpio.OUT)
+
+     pwm = gpio.PWM(pin, 100)
+     pwm.start(0)
+
+     for dc in range(0, 100, 1):
+         pwm.ChangeDutyCycle(dc)
+         sleep(0.05)
+
+     for dc in range(100, 0, -1):
+         pwm.ChangeDutyCycle(dc)
+         sleep(0.05)
+
+     pwm.ChangeDutyCycle(0)
+     ```
+     Pin 25 is assigned pulse width modulation and the duty cycle (duration  of very fast pulses) is increased then decreased incrementally.
+14.  Upon running this program, the LED will appear to get brighter then dimmer.
+
+## Analog Input
+15.  
