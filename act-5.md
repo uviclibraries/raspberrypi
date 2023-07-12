@@ -7,7 +7,7 @@ parent: Workshop Activities
 
 <img src="images/act-5/pi3-gpio.svg" alt="pi3 gpio" style="float:right;width:480px;">
 
-# Electronics and The Raspberry Pi
+# Electronics With The Raspberry Pi
 
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
@@ -105,3 +105,6 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Analog Input
 15.  
+
+
+[NEXT STEP: Google Assistant](act-6.html){: .btn .btn-blue }
