@@ -100,7 +100,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 
      pwm.ChangeDutyCycle(0)
      ```
-     Pin 25 is assigned pulse width modulation and the duty cycle (duration  of very fast pulses) is increased then decreased incrementally.
+     Pin 25 is assigned pulse width modulation and the duty cycle (time interval of the pulses) is increased then decreased incrementally.
 14.  Upon running this program, the LED will appear to get brighter then dimmer.
 
 ## Analog Input
