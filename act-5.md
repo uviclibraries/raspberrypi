@@ -76,8 +76,9 @@ If you have any questions or get stuck as you work through this in-class exercis
      The parameter `gpio.RISING` specifies calling the function when the state changes from low to high. Alternatively, `gpio.FALLING` could have been used for high to low or `gpio.BOTH` for either case.
 
 ## Pulse Width Modulation
-11.  Connect an LED to pin 25 like in the blink example.
-12.  Create a Python file named `fade.py` and enter the following:
+11.  Despite GPIO pins being either on or off, the brightness of an LED or the speed of a motor can be controlled by switching the pin on and off *very* quickly.
+12.  Connect an LED to pin 25 like in the blink example.
+13.  Create a Python file named `fade.py` and enter the following:
      ```
      import RPi.GPIO as gpio
      from time import sleep
@@ -100,7 +101,7 @@ If you have any questions or get stuck as you work through this in-class exercis
      pwm.ChangeDutyCycle(0)
      ```
      Pin 25 is assigned pulse width modulation and the duty cycle (duration  of very fast pulses) is increased then decreased incrementally.
-13.  Upon running this program, the LED will appear to get brighter then dimmer.
+14.  Upon running this program, the LED will appear to get brighter then dimmer.
 
 ## Analog Input
-14.  
+15.  
