@@ -14,14 +14,15 @@ If you have any questions or get stuck as you work through this in-class exercis
 1.  Open this document in your browser and so that you can click on the hyperlinks in the document: http://bit.ly/2MCdL7r
 2.  Download a copy of the **Raspberry Pi OS with desktop** from the [Raspberry Pi website](https://www.raspberrypi.com/software/operating-systems/){:target="_blank"}
     -   **Note:** This download will be ~1GB in size. If the download looks like it will take more than 5 minutes, ask your instructor for a thumb drive copy.
-3.  Install this [Etcher disk imager](https://www.balena.io/etcher/){:target="_blank"} for Windows, Mac, and Linux on your computer
-4.  Using Etcher burn the disk image onto the SD card (If your computer does not have an SD card reader, you can borrow one from the Music and Media desk in the library):
+3.  Install this [Etcher disk imager](https://www.balena.io/etcher/){:target="_blank"} for Windows, Mac, or Linux on your computer.
+4.  Using Etcher, burn the disk image onto the SD card:
+    -   If your computer does not have an SD card slot, you can borrow an adapter from the Music and Media desk in the library.
     -   Put the SD card into the USB adapter/micro-adapter then into your computer.
     -   Unzip the Raspbian file downloaded in step 1, and open Etcher.
     -   Follow the directions in Etcher to copy the file to the SD card.
 5.  Raspbian is now installed onto the SD card!
-    -   If you are on windows, eject the drive before removing the SD card.
-    -   If you are on a mac the drive will be ejected for you. Go ahead and remove the SD card.
+    -   If you are on Windows, eject the drive before removing the SD card.
+    -   If you are on a Mac the drive will be ejected for you. Go ahead and remove the SD card.
     -   Insert the card into the SD port of the Raspberry Pi, connect the peripherals, and power it up.
 
 ## Initial Setup of Raspbian
@@ -46,7 +47,6 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Installing New Software on Raspbian
 7.  Enter the command: `sudo apt-get install <Software Name Here>`
-    -   Example: `sudo apt-get install gimp`
 8.  In a new terminal shell, we will install the Python interpreter: `sudo apt-get install python3`
 
 ## Introduction to Python Programming, Hello World and Nano
@@ -59,7 +59,9 @@ If you have any questions or get stuck as you work through this in-class exercis
 11.  In case we want to save a program, we need to be able to create new files. To do so, we will use nano.
      -   Enter this command `sudo nano hello_world.py`
      -   In the nano window, type in `message = ‘Hello, world!’` then on a new line `print(message)`.
-     -   Now, to save the file, enter the keystroke `ctrl+x`, then press `Y`, then `Enter`. You should now be back in the terminal.
+     -   Now to save the file, press “ctrl” and “X” then “Y” to save and exit. You should now be back in the terminal.
+         - If you need to exit without saving, press "N".
+         - If you need to cancel the exit process and return to editing, press "ctrl" and "C".
      -   From here, type in `python3 hello_world.py`
 
 ## Extended Configuration
@@ -71,10 +73,11 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   You’ve now enabled autologin to the desktop.
      -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
 
-## Important Notes
+## Other Important Commands
 15.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
 16.  Shut down the Raspberry Pi: `sudo shutdown -h now`
 
+<!--
 ## Projects
 Pick some projects!
    -   [Kiosk Computer](http://bit.ly/2ryOD9G){:target="_blank"}
@@ -83,5 +86,6 @@ Pick some projects!
    -   [Lakka Retro Gaming Computer](http://bit.ly/33CDwL7){:target="_blank"}
    -   [C64 Disk Hack](http://bit.ly/2O7ajSP){:target="_blank"}
    -   Or go to **Start Menu > Help > Projects** on the Raspberry Pi to view a list of projects in the Chromium web browser.
+-->
 
 [NEXT STEP: Retro Pi](act-2.html){: .btn .btn-blue }
