@@ -83,3 +83,6 @@ If you have any questions or get stuck as you work through this in-class exercis
      Then save and exit.
 35.  When using the hot word program, the LED should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
 36.  
+
+
+[NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
