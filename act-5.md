@@ -38,47 +38,10 @@ If you have any questions or get stuck as you work through this in-class exercis
 6.  Press "ctrl" and "C" to exit the program.
     -   Note that exiting while the LED is on will cause it to stay on.
 
-## Push Button
-7.  Connect a momentary push button in series with a 10k&Omega; resistor between GPIO pin 25 and 3.3V power. <br><img src="images/act-5/pi-button-diagram.png" alt="button" style="float:center;width:480px;">
-8.  Create a Python file named `button.py` and enter the following:
-    ```
-    import RPi.GPIO as gpio
-
-    pin = 25
-    gpio.setmode(gpio.BCM)
-    gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
-
-    while True:
-        if gpio.input(pin) == gpio.HIGH:
-            print("Button Pushed")
-    ```
-    The new parameter `pull_up_down=gpio.PUD_DOWN` will internally connect the pin to ground with a very high value resistor.
-9.  Run the program and then press the button. The terminal should be filled with "Button Pushed" due to the while loop repeating many times per second.
-10.  In some cases, a more useful approach to GPIO input is callbacks. These work by interrupting the program to call a function. In this example, `buttonPressedCallback` will interrupt a counting process:
-     ```
-     import RPi.GPIO as gpio
-     from time import sleep
-
-     def buttonPressedCallback(channel):
-         print("Pressed")
-
-     pin = 25
-     gpio.setmode(gpio.BCM)
-     gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
-     gpio.add_event_detect(pin, gpio.RISING, callback=buttonPressedCallback)
-     i = 0
-     
-     while True:
-         print(i)
-         i = i + 1
-         sleep(1)
-     ```
-     The parameter `gpio.RISING` specifies calling the function when the state changes from low to high. Alternatively, `gpio.FALLING` could have been used for high to low or `gpio.BOTH` for either case.
-
-## Pulse Width Modulation
-11.  Despite GPIO pins being either on or off, the brightness of an LED or the speed of a motor can be controlled by switching the pin on and off *very* quickly.
-12.  Connect an LED to pin 25 like in the blink example.
-13.  Create a Python file named `fade.py` and enter the following:
+## Fade
+7.  Despite GPIO pins being either on or off, the brightness of an LED or the speed of a motor can be controlled by switching the pin on and off *very* quickly. This technique is called Pulse Width Modulation (PWM).
+8.  Keep the wiring of the blink example.
+9.  Create a Python file named `fade.py` and enter the following:
      ```
      import RPi.GPIO as gpio
      from time import sleep
@@ -101,10 +64,48 @@ If you have any questions or get stuck as you work through this in-class exercis
      pwm.ChangeDutyCycle(0)
      ```
      Pin 25 is assigned pulse width modulation and the duty cycle (time interval of the pulses) is increased then decreased incrementally.
-14.  Upon running this program, the LED will appear to get brighter then dimmer.
+10.  Upon running this program, the LED will appear to get brighter then dimmer.
+
+## Push Button
+11.  Connect a momentary push button in series with a 10k&Omega; resistor between GPIO pin 25 and 3.3V power. <br><img src="images/act-5/pi-button-diagram.png" alt="button" style="float:center;width:480px;">
+12.  Create a Python file named `button.py` and enter the following:
+    ```
+    import RPi.GPIO as gpio
+
+    pin = 25
+    gpio.setmode(gpio.BCM)
+    gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
+
+    while True:
+        if gpio.input(pin) == gpio.HIGH:
+            print("Button Pushed")
+    ```
+    The new parameter `pull_up_down=gpio.PUD_DOWN` will internally connect the pin to ground with a very high value resistor.
+13.  Run the program and then press the button. The terminal should be filled with "Button Pushed" due to the while loop repeating many times per second.
+14.  In some cases, a more useful approach to GPIO input is callbacks. These work by interrupting the program to call a function. In this example, `buttonPressedCallback` will interrupt a counting process:
+     ```
+     import RPi.GPIO as gpio
+     from time import sleep
+
+     def buttonPressedCallback(channel):
+         print("Pressed")
+
+     pin = 25
+     gpio.setmode(gpio.BCM)
+     gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
+     gpio.add_event_detect(pin, gpio.RISING, callback=buttonPressedCallback)
+     i = 0
+     
+     while True:
+         print(i)
+         i = i + 1
+         sleep(1)
+     ```
+     The parameter `gpio.RISING` specifies calling the function when the state changes from low to high. Alternatively, `gpio.FALLING` could have been used for high to low or `gpio.BOTH` for either case.
 
 ## Analog Input
-15.  
+15.  Once again we encounter the obstacle of the Raspberry Pi having only binary state GPIO pins. However, analog to digital conversion is still possible by measuring the amount of time for a capacitor to charge to a "HIGH" voltage level.
+16.  
 
 
 [NEXT STEP: Google Assistant](act-6.html){: .btn .btn-blue }
