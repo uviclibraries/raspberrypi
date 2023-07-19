@@ -106,7 +106,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 ## Analog Input
 15.  Once again we encounter the obstacle of binary state GPIO pins. However, analog to digital conversion is still possible by measuring the amount of time a capacitor takes to charge from a "LOW" to a "HIGH" voltage level.
 16.  
-17.  Create a Python file named `button.py` and enter the following:
+17.  Create a Python file named `analog.py` and enter the following:
      ```
      import RPi.GPIO as gpio
      from time import sleep
@@ -138,6 +138,7 @@ If you have any questions or get stuck as you work through this in-class exercis
          print(analogRead())
          sleep(1)
      ```
+18.  
      
 
 
