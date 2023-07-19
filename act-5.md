@@ -69,18 +69,18 @@ If you have any questions or get stuck as you work through this in-class exercis
 ## Push Button
 11.  Connect a momentary push button in series with a 10k&Omega; resistor between GPIO pin 25 and 3.3V power. <br><img src="images/act-5/pi-button-diagram.png" alt="button" style="float:center;width:480px;">
 12.  Create a Python file named `button.py` and enter the following:
-    ```
-    import RPi.GPIO as gpio
+     ```
+     import RPi.GPIO as gpio
 
-    pin = 25
-    gpio.setmode(gpio.BCM)
-    gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
+     pin = 25
+     gpio.setmode(gpio.BCM)
+     gpio.setup(pin, gpio.IN, pull_up_down=gpio.PUD_DOWN)
 
-    while True:
-        if gpio.input(pin) == gpio.HIGH:
-            print("Button Pushed")
-    ```
-    The new parameter `pull_up_down=gpio.PUD_DOWN` will internally connect the pin to ground with a very high value resistor.
+     while True:
+         if gpio.input(pin) == gpio.HIGH:
+             print("Button Pushed")
+     ```
+     The new parameter `pull_up_down=gpio.PUD_DOWN` will internally connect the pin to ground with a very high value resistor.
 13.  Run the program and then press the button. The terminal should be filled with "Button Pushed" due to the while loop repeating many times per second.
 14.  In some cases, a more useful approach to GPIO input is callbacks. These work by interrupting the program to call a function. In this example, `buttonPressedCallback` will interrupt a counting process:
      ```
@@ -104,8 +104,41 @@ If you have any questions or get stuck as you work through this in-class exercis
      The parameter `gpio.RISING` specifies calling the function when the state changes from low to high. Alternatively, `gpio.FALLING` could have been used for high to low or `gpio.BOTH` for either case.
 
 ## Analog Input
-15.  Once again we encounter the obstacle of the Raspberry Pi having only binary state GPIO pins. However, analog to digital conversion is still possible by measuring the amount of time for a capacitor to charge to a "HIGH" voltage level.
+15.  Once again we encounter the obstacle of binary state GPIO pins. However, analog to digital conversion is still possible by measuring the amount of time a capacitor takes to charge from a "LOW" to a "HIGH" voltage level.
 16.  
+17.  Create a Python file named `button.py` and enter the following:
+     ```
+     import RPi.GPIO as gpio
+     from time import sleep
+
+     pin1 = 23
+     pin2 = 24
+     gpio.setmode(gpio.BCM)
+
+     def discharge():
+         gpio.setup(pin1, gpio.IN)
+         gpio.setup(pin2, gpio.OUT)
+         gpio.output(pin2, gpio.LOW)
+         sleep(0.004)
+
+     def chargeTime():
+         gpio.setup(pin1, gpio.OUT)
+         gpio.setup(pin2, gpio.IN)
+         gpio.output(pin1, gpio.HIGH)
+         t = 0
+         while not gpio.input(pin2):
+             t = t + 1
+         return t
+
+     def analogRead():
+         discharge()
+         return chargeTime()
+
+     while True:
+         print(analogRead())
+         sleep(1)
+     ```
+     
 
 
 [NEXT STEP: Google Assistant](act-6.html){: .btn .btn-blue }
