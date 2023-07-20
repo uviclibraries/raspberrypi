@@ -1,6 +1,6 @@
 ---
 layout: default
-title: 5-Electronics and The Raspberry Pi
+title: 5-Electronics With The Raspberry Pi
 nav_order: 6
 parent: Workshop Activities
 ---
