@@ -105,7 +105,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Analog Input
 15.  Once again we encounter the obstacle of binary state GPIO pins. However, analog to digital conversion is still possible by measuring the amount of time a capacitor takes to charge from a "LOW" to a "HIGH" voltage level.
-16.  Find a potentiometer (variable resistor), a 0.22&mu;F capacitor, and two 1k&Omega; resistors. Connect the components as shown in this diagram: <br><span style="color:red">**Warning: The side of the capacitor marked with a line can only be connected to ground, or else it will act like a firecracker instead of an actual capacitor.**</span> <br><img src="images/act-5/pi-analog-diagram.png" alt="button" style="float:center;width:480px;">
+16.  Find a potentiometer (variable resistor), a 0.22&mu;F capacitor, and two 1k&Omega; resistors. Connect the components as shown in this diagram: <br><span style="color:red">**Warning: The side of the capacitor marked with a line can only be connected to ground. This type of capacitor will explode if connected backwards.**</span> <br><img src="images/act-5/pi-analog-diagram.png" alt="button" style="float:center;width:480px;">
 17.  Create a Python file named `analog.py` and enter the following:
      ```
      import RPi.GPIO as gpio
@@ -138,7 +138,7 @@ If you have any questions or get stuck as you work through this in-class exercis
          print(analogRead())
          sleep(1)
      ```
-18.  
+18.  Run the program and watch the printed value change as you turn the knob of the potentiometer. The animation below helps to visualize what is happening many times per second. <br><img src="images/act-5/pi-analog-animation.gif" alt="button" style="float:center;width:480px;">
      
 
 
