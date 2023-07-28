@@ -10,6 +10,10 @@ parent: Workshop Activities
 # Retro Gaming With RetroPi
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
+Entirely new instructions that will take far less time are coming soon.
+
+# Start of Old Content
+
 ## Installing Necessary Software
 1.  Install a copy of RetroPi at [this site](https://retropie.org.uk/download/){:target="_blank"} for the appropriate hardware.
 2.  After getting the image, run etcher and load the image onto the microSD card.
