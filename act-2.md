@@ -10,7 +10,18 @@ parent: Workshop Activities
 # Retro Gaming With RetroPi
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
-Entirely new instructions that will take far less time are coming soon.
+## Installing The Necessary Software
+1.  Install the dependencies of the RetroPie setup script: `sudo apt install git lsb-release`
+2.  Download the RetroPie setup script from GitHub: `git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git`
+3.  Run the installation script:
+    ```
+    cd RetroPie-Setup
+    chmod +x retropie_setup.sh
+    sudo ./retropie_setup.sh
+    ```
+    In the interest of saving time, we will install emulators individually instead of proceeding with the full RetroPie installation.
+5.  Navigate to `Manage packages -> core` and then `Install all core packages`
+6.  
 
 # Start of Old Content
 
