@@ -20,8 +20,13 @@ If you have any questions or get stuck as you work through this in-class exercis
     sudo ./retropie_setup.sh
     ```
     In the interest of saving time, we will install emulators individually instead of proceeding with the full RetroPie installation.
-5.  Navigate to `Manage packages -> core` and then `Install all core packages`
-6.  
+5.  Navigate to `Manage packages -> core`  then `Install all core packages` (~8 Minutes)
+6.  Navigate to `Manage packages -> main -> lr-mame2003` then `Install from pre-compiled binary` (~2 Minutes)
+
+## Running RetroPie
+1.  Using the Raspberry Pi desktop file explorer, navigate to `/home/pi/RetroPie/roms/arcade` and copy over a MAME compatible arcade game ROM.
+2.  Run the command: `emulationstation`
+3.  You will be prompted to configure the RetroPie controls. 
 
 # Start of Old Content
 
