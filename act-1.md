@@ -27,36 +27,36 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Initial Setup of Raspbian
 6.  With all peripherals installed, allow the Raspberry Pi to boot into the desktop.
-    -   The first thing you’ll be prompted to do will be to set up a new password, for the purposes of this lab set the password to be **raspberry**, or skip this step.
-    -   When prompted, reboot your raspberry pi.
-    -   Set the date and time on your raspberry pi: <img src="images/act-1/terminal-icon.png" alt="console icon" style="float:right;width:60px;">
-        -   Open the terminal by clicking on the icon on the top bar (see icon on right).
-        -   In the terminal enter this command with the date and time then press enter: `sudo date -s 'mm/dd/yyyy hh:mm:ss'`
-            -   Example: `sudo date -s '06/30/2023 11:40:00'`
-    -   Connect to the internet through UVIC Guest WIFI:
-        -   Click on the WIFI icon on the top bar and select "UVicStart". This will connect the Raspberry Pi to the UVIC network as a guest.
-        -   Upon opening the Chromium web browser, the UVicStart Guest Wireless page should open. <img src="images/act-1/chromium-icon.png" alt="globe icon" style="float:right;width:60px;">
-        -   Click the "REGISTER" button.
-        -   Enter your email address and agree to the terms and conditions. You will be given 15 minutes of access to complete the registration.
-        -   Log into the same email account on the Raspberry Pi. Note that Google Gmail could be very slow to respond on a Raspberry Pi 3, but will still work.
-        -   Click the link at the top of the automatically sent email to complete the registration.
-        -   At this point, you can sign out of your email account for security reasons.
-        -   In order for the Raspberry Pi to accesss archive.raspberrypi.org for updates and software while connected to the UVIC network, run the following command: `sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1`
-        -   Once this is done, enter this command: `sudo apt-get update`
-            -   Outside of the workshop you would want to run `sudo apt-get upgrade` as well, but we will not as that will take a long time!
+7.  The first thing you’ll be prompted to do will be to set up a new password, for the purposes of this lab set the password to be **raspberry**, or skip this step.
+8.  When prompted, reboot your raspberry pi.
+9.  Set the date and time on your raspberry pi: <img src="images/act-1/terminal-icon.png" alt="console icon" style="float:right;width:60px;">
+    -   Open the terminal by clicking on the icon on the top bar (see icon on right).
+    -   In the terminal enter this command with the date and time then press enter: `sudo date -s 'mm/dd/yyyy hh:mm:ss'`
+        -   Example: `sudo date -s '06/30/2023 11:40:00'`
+10.  Connect to the internet through UVIC Guest WIFI:
+     -   Click on the WIFI icon on the top bar and select "UVicStart". This will connect the Raspberry Pi to the UVIC network as a guest.
+     -   Upon opening the Chromium web browser, the UVicStart Guest Wireless page should open. <img src="images/act-1/chromium-icon.png" alt="globe icon" style="float:right;width:60px;">
+     -   Click the "REGISTER" button.
+     -   Enter your email address and agree to the terms and conditions. You will be given 15 minutes of access to complete the registration.
+     -   Log into the same email account on the Raspberry Pi. Note that Google Gmail could be very slow to respond on a Raspberry Pi 3, but will still work.
+     -   Click the link at the top of the automatically sent email to complete the registration.
+     -   At this point, you can sign out of your email account for security reasons.
+     -   In order for the Raspberry Pi to accesss archive.raspberrypi.org for updates and software while connected to the UVIC network, run the following command: `sudo sysctl -w net.ipv6.conf.all.disable_ipv6=1`
+11.  Once this is done, enter this command: `sudo apt-get update`
+     -   Outside of the workshop you would want to run `sudo apt-get upgrade` as well, but we will not as that will take a long time!
 
 ## Installing New Software on Raspbian
-7.  Enter the command: `sudo apt-get install <Software Name Here>`
-8.  In a new terminal shell, we will install the Python interpreter: `sudo apt-get install python3`
+12.  Enter the command: `sudo apt-get install <Software Name Here>`
+13.  In a new terminal shell, we will install the Python interpreter: `sudo apt-get install python3`
 
 ## Introduction to Python Programming, Hello World and Nano
-9.  With Python installed, open the terminal and enter: `python3`
+14.  With Python installed, open the terminal and enter: `python3`
     -   A new prompt should show up “**\>\>\>**”. This is the Python shell.
-10.  In here simple Python commands can be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
+15.  In here simple Python commands can be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
      -   Type in `x+y` and press enter
      -   Try some other basic arithmetic commands with these variables!
      -   When you’re done type: `exit()` and press enter.
-11.  In case we want to save a program, we need to be able to create new files. To do so, we will use nano.
+16.  In case we want to save a program, we need to be able to create new files. To do so, we will use nano.
      -   Enter this command `sudo nano hello_world.py`
      -   In the nano window, type in `message = ‘Hello, world!’` then on a new line `print(message)`.
      -   Now to save the file, press “ctrl” and “X” then “Y” to save and exit. You should now be back in the terminal.
@@ -65,17 +65,17 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   From here, type in `python3 hello_world.py`
 
 ## Extended Configuration
-12.  In the case that you need to, or want to, edit any of the core settings of the Raspberry Pi, open a terminal and execute this command: `sudo raspi-config`
-13.  There are multiple configuration options here, to learn more checkout [this website](https://elinux.org/RPi_raspi-config){:target="_blank"}
-14.  For an example of a useful feature, we will enable auto-login on the Raspberry Pi.
+17.  In the case that you need to, or want to, edit any of the core settings of the Raspberry Pi, open a terminal and execute this command: `sudo raspi-config`
+18.  There are multiple configuration options here, to learn more checkout [this website](https://elinux.org/RPi_raspi-config){:target="_blank"}
+19.  For an example of a useful feature, we will enable auto-login on the Raspberry Pi.
      -   After executing **raspi-config** (`sudo raspi-config`) navigate to **Boot Options** and press **Enter**
      -   Navigate to **Desktop/CLI** then to **Desktop Autologin** and **Enter**.
      -   You’ve now enabled autologin to the desktop.
      -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
 
 ## Other Important Commands
-15.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
-16.  Shut down the Raspberry Pi: `sudo shutdown -h now`
+20.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
+21.  Shut down the Raspberry Pi: `sudo shutdown -h now`
 
 <!--
 ## Projects
