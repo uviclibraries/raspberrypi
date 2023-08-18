@@ -24,9 +24,10 @@ If you have any questions or get stuck as you work through this in-class exercis
 6.  Navigate to `Manage packages -> main -> lr-mame2003` then `Install from pre-compiled binary` (~2 Minutes)
 
 ## Running RetroPie
-1.  Using the Raspberry Pi desktop file explorer, navigate to `/home/pi/RetroPie/roms/arcade` and copy over a MAME compatible arcade game ROM.
-2.  Run the command: `emulationstation`
-3.  You will be prompted to configure the RetroPie controls. 
+7.  Using the Raspberry Pi desktop file explorer, navigate to `/home/pi/RetroPie/roms/arcade` and copy over a MAME compatible arcade game ROM.
+8.  Run the command: `emulationstation`
+9.  You will be prompted to configure the RetroPie controls.
+10.  Using the controls that have been assigned, navigate to the arcade game and try running it.
 
 # Start of Old Content
 
