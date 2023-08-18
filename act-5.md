@@ -146,7 +146,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 19.  Run the program and watch the printed value change as you turn the knob of the potentiometer. The animation below helps to visualize what is happening many times per second. <br><img src="images/act-5/pi-analog-animation.gif" alt="button" style="float:center;width:480px;">
 
 ## GPIO Audio
-20.  The final example circuit will be a simple transistor amplifier to play audio using a hardware PWM pin. Keep in mind the audio quality of this circuit is going to be nowhere near excellent, and most models of the Raspberry Pi have a 3mm audio jack for connecting better quality speakers. The only practical use of this circuit would be playing audio from a [Raspberry Pi Zero](https://www.raspberrypi.com/products/raspberry-pi-zero/){:target="_blank"} with no audio jack.
+20.  This final circuit will be a simple transistor amplifier to play audio using a hardware PWM pin. Keep in mind the audio quality of this circuit is going to be nowhere near excellent, and most models of the Raspberry Pi have a 3mm audio jack for connecting better quality speakers. The only practical use of this circuit would be playing audio from a [Raspberry Pi Zero](https://www.raspberrypi.com/products/raspberry-pi-zero/){:target="_blank"} with no audio jack.
 21.  List of Parts:
      -   1x Speaker
      -   1x NPN BJT Type Transistor (The DSC has BC547s)
@@ -156,8 +156,11 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   1x 10k&Omega; Resistor
      -   Wires
 22.  Connect the components as shown in this diagram: <br><img src="images/act-5/pi-audio-diagram.png" alt="audio" style="float:center;width:480px;">
+     <br>This circuit will not require another Python file.
 23.  Edit the boot config file: `sudo nano /boot/config.txt`
 24.  Add a new line `dtoverlay=audremap,pins_12_13` to the end of the file then save and exit.
-25.  
+25.  Test the audio output: `speaker-test -c2`
+26.  Wait until you hear static, then press “ctrl” and “C” to exit.
+27.  Open Chromium and browse for music on YouTube. You will notice piano notes in particular are extremely distorted. I warned you about the audio quality!
 
 [NEXT STEP: Google Assistant](act-6.html){: .btn .btn-blue }
