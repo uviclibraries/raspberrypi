@@ -105,8 +105,13 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Analog Input
 15.  Once again we encounter the obstacle of binary state GPIO pins. However, analog to digital conversion is still possible by measuring the amount of time a capacitor takes to charge from a "LOW" to a "HIGH" voltage level.
-16.  Find a potentiometer (variable resistor), a 0.22&mu;F capacitor, and two 1k&Omega; resistors. Connect the components as shown in this diagram: <br><span style="color:red">**Warning: The side of the capacitor marked with a line can only be connected to ground. This type of capacitor will explode if connected backwards.**</span> <br><img src="images/act-5/pi-analog-diagram.png" alt="button" style="float:center;width:480px;">
-17.  Create a Python file named `analog.py` and enter the following:
+16.  List of Parts:
+     -   1x Potentiometer (Variable Resistor)
+     -   1x 0.22&mu;F Capacitor
+     -   2x 1k&Omega; Resistor
+     -   Wires
+17.  Connect the components as shown in this diagram: <br><span style="color:red">**Warning: This type of capacitor is known to explode if connected backwards. The side of the capacitor marked with a line can only be connected to ground or a lower voltage potential.**</span> <br><img src="images/act-5/pi-analog-diagram.png" alt="analog" style="float:center;width:480px;">
+18.  Create a Python file named `analog.py` and enter the following:
      ```
      import RPi.GPIO as gpio
      from time import sleep
@@ -138,8 +143,21 @@ If you have any questions or get stuck as you work through this in-class exercis
          print(analogRead())
          sleep(1)
      ```
-18.  Run the program and watch the printed value change as you turn the knob of the potentiometer. The animation below helps to visualize what is happening many times per second. <br><img src="images/act-5/pi-analog-animation.gif" alt="button" style="float:center;width:480px;">
-     
+19.  Run the program and watch the printed value change as you turn the knob of the potentiometer. The animation below helps to visualize what is happening many times per second. <br><img src="images/act-5/pi-analog-animation.gif" alt="button" style="float:center;width:480px;">
 
+## GPIO Audio
+20.  The final example circuit will be a simple transistor amplifier to play audio using a hardware PWM pin. Keep in mind the audio quality of this circuit is going to be nowhere near excellent, and most models of the Raspberry Pi have a 3mm audio jack for connecting better quality speakers. The only practical use of this circuit would be playing audio from a [Raspberry Pi Zero](https://www.raspberrypi.com/products/raspberry-pi-zero/){:target="_blank"} with no audio jack.
+21.  List of Parts:
+     -   1x Speaker
+     -   1x NPN BJT Type Transistor (The DSC has BC547s)
+     -   1x 0.1&mu;F Capacitor
+     -   1x 1&mu;F Capacitor
+     -   2x 1k&Omega; Resistor
+     -   1x 10k&Omega; Resistor
+     -   Wires
+22.  Connect the components as shown in this diagram: <br><img src="images/act-5/pi-audio-diagram.png" alt="audio" style="float:center;width:480px;">
+23.  Edit the boot config file: `sudo nano /boot/config.txt`
+24.  Add a new line `dtoverlay=audremap,pins_12_13` to the end of the file then save and exit.
+25.  
 
 [NEXT STEP: Google Assistant](act-6.html){: .btn .btn-blue }
