@@ -152,15 +152,16 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   1x NPN BJT Type Transistor (The DSC has BC547s)
      -   1x 0.1&mu;F Capacitor
      -   1x 1&mu;F Capacitor
+     -   1x 10&Omega; Resistor
      -   2x 1k&Omega; Resistor
      -   1x 10k&Omega; Resistor
      -   Wires
 22.  Connect the components as shown in this diagram: <br><img src="images/act-5/pi-audio-diagram.png" alt="audio" style="float:center;width:480px;">
-     <br>This circuit will not require another Python file.
+     <br>The 10&Omega; resistor between the speaker and 3.3V helps limit the current through the transistor and did not restrict the volume during testing. This circuit will not require another Python file.
 23.  Edit the boot config file: `sudo nano /boot/config.txt`
-24.  Add a new line `dtoverlay=audremap,pins_12_13` to the end of the file then save and exit.
+24.  Add a new line `dtoverlay=audremap,pins_12_13` to the end of the file then save and exit. This assigns 2 channel audio output to use the hardware PWM pins 12 and 13.
 25.  Test the audio output: `speaker-test -c2`
 26.  Wait until you hear static, then press “ctrl” and “C” to exit.
-27.  Open Chromium and browse for music on YouTube. You will notice piano notes in particular are extremely distorted. I warned you about the audio quality!
+27.  Open Chromium and browse for music on YouTube. You will notice that piano notes in particular are extremely distorted. I warned you about the audio quality!
 
 [NEXT STEP: Google Assistant](act-6.html){: .btn .btn-blue }
