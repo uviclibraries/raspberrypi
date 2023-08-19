@@ -145,7 +145,7 @@ If you have any questions or get stuck as you work through this in-class exercis
      ```
 19.  Run the program and watch the printed value change as you turn the knob of the potentiometer. The animation below helps to visualize what is happening many times per second. <br><img src="images/act-5/pi-analog-animation.gif" alt="button" style="float:center;width:480px;">
 
-## GPIO Audio
+## GPIO Speaker
 20.  This final circuit will be a simple transistor amplifier to play audio using a hardware PWM pin. Keep in mind the audio quality of this circuit is going to be nowhere near excellent, and most models of the Raspberry Pi have a 3mm audio jack for connecting better quality speakers. The only practical use of this circuit would be playing audio from a [Raspberry Pi Zero](https://www.raspberrypi.com/products/raspberry-pi-zero/){:target="_blank"} with no audio jack.
 21.  List of Parts:
      -   1x Speaker
