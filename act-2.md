@@ -11,17 +11,21 @@ parent: Workshop Activities
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
 ## Installing The Necessary Software
-1.  Install the dependencies of the RetroPie setup script: `sudo apt install git lsb-release`
-2.  Download the RetroPie setup script from GitHub: `git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git`
-3.  Run the installation script:
+1.  Configure the Raspberry Pi graphics settings: `sudo raspi-config`
+    -   `Performance Options -> GPU Memory` and set the GPU memory to 256MB.
+    -   `Advanced Options -> GL Driver` and select `Legacy` to disable the experimental GL driver.
+2.  Reboot the Raspberry Pi after changing the settings.
+3.  Install the dependencies of the RetroPie setup script: `sudo apt install git lsb-release`
+4.  Download the RetroPie setup script from GitHub: `git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git`
+5.  Run the installation script:
     ```
     cd RetroPie-Setup
     chmod +x retropie_setup.sh
     sudo ./retropie_setup.sh
     ```
     In the interest of saving time, we will install emulators individually instead of proceeding with the full RetroPie installation.
-5.  Navigate to `Manage packages -> core`  then `Install all core packages` (~8 Minutes)
-6.  Navigate to `Manage packages -> main -> lr-mame2003` then `Install from pre-compiled binary` (~2 Minutes)
+6.  Navigate to `Manage packages -> core`  then `Install all core packages` (~8 Minutes)
+7.  Navigate to `Manage packages -> main -> lr-mame2003` then `Install from pre-compiled binary` (~2 Minutes)
 
 ## Running RetroPie
 7.  Using the Raspberry Pi desktop file explorer, navigate to `/home/pi/RetroPie/roms/arcade` and copy over a MAME compatible arcade game ROM.
