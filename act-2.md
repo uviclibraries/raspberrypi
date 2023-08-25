@@ -10,7 +10,7 @@ parent: Workshop Activities
 # Retro Gaming With RetroPi
 If you have any questions or get stuck as you work through this in-class exercise, please ask the instructor for assistance. Enjoy!
 
-## Installing The Necessary Software
+## Installation
 1.  Configure the Raspberry Pi graphics settings: `sudo raspi-config`
     -   `Performance Options -> GPU Memory` and set the GPU memory to 256MB.
     -   `Advanced Options -> GL Driver` and select `Legacy` to disable the experimental GL driver.
@@ -28,11 +28,18 @@ If you have any questions or get stuck as you work through this in-class exercis
 7.  Navigate to `Manage packages -> main -> lr-mame2003` then `Install from pre-compiled binary` (~2 Minutes)
 
 ## Running RetroPie
-7.  Using the Raspberry Pi desktop file explorer, navigate to `/home/pi/RetroPie/roms/arcade` and copy over a MAME compatible arcade game ROM.
-8.  Run the command: `emulationstation`
-9.  You will be prompted to configure the RetroPie controls.
-10.  Using the controls that have been assigned, navigate to the arcade game and try running it.
+8.  Using the Raspberry Pi desktop file explorer, navigate to `/home/pi/RetroPie/roms/arcade` and copy over a MAME compatible arcade game ROM.
+9.  Run the command: `emulationstation`
+10.  You will be prompted to configure the RetroPie controls.
+     -   Hold any key on the keyboard to start.
+     -   Quickly press a key on the keyboard to assign an input.
+     -   Hold any key to skip an input. 
+11.  Using the controls that have been assigned, navigate to the arcade game and try running it.
+12.  Press the `HOTKEY` and `START` inputs to exit a game.
+13.  To exit RetroPie, press `HOTKEY` and `START` again, then go to `QUIT -> QUIT EMULATIONSTATION`
+14.  If you plan to build an arcade machine accessible to the public using RetroPie, you may want to keep the `HOTKEY` hidden.
 
+<!--
 # Start of Old Content
 
 ## Installing Necessary Software
@@ -67,5 +74,6 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Important Information
 5.  Changing games: hold down the hotkey, select, and start to exit to the main menu.
+-->
 
 [NEXT STEP: Kiosk Computer](act-3.html){: .btn .btn-blue }
