@@ -37,7 +37,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 11.  Using the controls that have been assigned, navigate to the arcade game and try running it.
 12.  Press the `HOTKEY` and `START` inputs to exit a game.
 13.  To exit RetroPie, press `HOTKEY` and `START` again, then go to `QUIT -> QUIT EMULATIONSTATION`
-14.  If you plan to build an arcade machine accessible to the public using RetroPie, you may want to keep the `HOTKEY` hidden.
+14.  If you plan to build an arcade machine accessible to the public using RetroPie, you may want to keep the `HOTKEY` hidden inside the physical enclosure.
 
 <!--
 # Start of Old Content
