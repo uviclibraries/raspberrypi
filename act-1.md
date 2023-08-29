@@ -46,7 +46,7 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   Outside of the workshop you would want to run `sudo apt-get upgrade` as well, but we will not as that will take a long time!
 
 ## Installing New Software on Raspbian
-12.  Enter the command: `sudo apt-get install <Software Name Here>`
+12.  To install new software, you will enter a command like this: `sudo apt-get install <Software Name Here>`
 13.  In a new terminal shell, we will install the Python interpreter: `sudo apt-get install python3`
 
 ## Introduction to Python Programming, Hello World and Nano
