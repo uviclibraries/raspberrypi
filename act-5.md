@@ -110,7 +110,7 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   1x 0.22&mu;F Capacitor
      -   2x 1k&Omega; Resistor
      -   Wires
-17.  Connect the components as shown in this diagram: <br><span style="color:red">**Warning: This type of capacitor is known to explode if connected backwards. The side of the capacitor marked with a line can only be connected to ground or a lower voltage potential.**</span> <br><img src="images/act-5/pi-analog-diagram.png" alt="analog" style="float:center;width:480px;">
+17.  Connect the components as shown in this diagram: <br><span style="color:red">**Warning: This type of capacitor is known to explode if connected backwards. The side of the capacitor marked with a line can only be connected to ground or a voltage lower than the other side.**</span> <br><img src="images/act-5/pi-analog-diagram.png" alt="analog" style="float:center;width:480px;">
 18.  Create a Python file named `analog.py` and enter the following:
      ```
      import RPi.GPIO as gpio
@@ -157,7 +157,7 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   1x 10k&Omega; Resistor
      -   Wires
 22.  Connect the components as shown in this diagram: <br><img src="images/act-5/pi-audio-diagram.png" alt="audio" style="float:center;width:480px;">
-     <br>The 10&Omega; resistor between the speaker and 3.3V helps limit the current through the transistor and did not restrict the volume during testing. This circuit will not require another Python file.
+     <br> **The capacitor pointing right in the diagram is 0.1&mu;F and the capacitor pointing down is 1&mu;F.**<br>The 10&Omega; resistor between the speaker and 3.3V helps limit the current through the transistor and did not restrict the volume during testing. This circuit will not require another Python file.
 23.  Edit the boot config file: `sudo nano /boot/config.txt`
 24.  Add a new line `dtoverlay=audremap,pins_12_13` to the end of the file then save and exit. This assigns 2 channel audio output to use the hardware PWM pins 12 and 13.
 25.  Test the audio output: `speaker-test -c2`
