@@ -77,9 +77,9 @@ If you have any questions or get stuck as you work through this in-class exercis
      
          ...
      ```
-36.  Ending a conversation after processing a custom event will require access to the `assistant` instance. Change the line where the `process_event` method is defined from `def process_event(event):` to `def process_event(assistant, event):`
+36.  Ending the conversation after a custom action will require the `assistant` instance. Change the line where the `process_event` method is defined from `def process_event(event):` to `def process_event(assistant, event):`
 37.  Find the line where `process_event` is called near the bottom of the file and change it from `process_event(event)` to `process_event(assistant, event)`
-38.  The LED connected to GPIO 14 is to be on when the Google assistant is active. Add these lines to the end of `process_event` and make sure to indent them to match the lines above:
+38.  Add these lines to the end of `process_event` and make sure to indent them to match the lines above:
      ```
      if event.type == EventType.ON_CONVERSATION_TURN_STARTED:
          gpio.output(14, gpio.HIGH)
@@ -99,10 +99,11 @@ If you have any questions or get stuck as you work through this in-class exercis
              gpio.output(15, gpio.LOW)
              assistant.stop_conversation()
      ```
-40.  Test the following custom behaviour:
+     The trick is to get the `text` string from the `ON_RECOGNIZING_SPEECH_FINISHED` event and compare it to your own command strings.
+40.  Test the custom behaviour that was added:
      -   GPIO 14 should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
      -   If you say "light on" GPIO 15 will turn on.
      -   If you say "light off" GPIO 15 will turn off.
-41.  Feel free to experiment. Any action that can be done using Python on a Raspberry Pi could be activated with a voice command!
+41.  Feel free to experiment. Anything that can normally be done using Python on a Raspberry Pi can be made into a voice command!
 
 [NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
