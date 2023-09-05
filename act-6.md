@@ -52,7 +52,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 20.  Generate the credentials: `google-oauthlib-tool --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --client-secrets ~/google_assistant/credentials.json`
 21.  Chromium will automatically open and prompt you to sign in with your Google account. Press "Continue" to give the Google Assistant access to your account. The last line of output in the terminal should say: `credentials saved: /home/pi/.config/google-oauthlib-tool/credentials.json`
 22.  Run the Google Assistant program: `googlesamples-assistant-pushtotalk`
-23.  Press the enter key and try talking into the microphone.
+23.  Press the enter key and try talking into the microphone. Make a query like "What time is it?" or "What is the weather tomorrow?"
 24.  To close the program, press "ctrl" and "C" twice.
 
 ## "Ok Google..."
@@ -60,29 +60,49 @@ If you have any questions or get stuck as you work through this in-class exercis
 26.  Go to line 65 and change `with Assistant(credentials) as assistant:` to `with Assistant(credentials, "device-model-id") as assistant:` where `device-model-id` should be the model ID from the Actions Console. Save and exit.
 27.  Run the hot word program: `googlesamples-assistant-hotword`
 28.  Say "Ok Google" followed by any query or request into the microphone.
+29.  Press "ctrl" and "C" once to exit.
 
 ## Electronics and Voice Control
-29.  Connect an LED in series with a resistor between GPIO pin 25 and ground. <br><img src="images/act-5/pi-blink-diagram.png" alt="blink" style="float:center;width:480px;">
-30.  Install the GPIO library to the Python environment: `sudo pip install RPi.GPIO`
-31.  Open the hot word file again: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
-32.  Near the top of the file right below the `from` and `import` statements, add the line: `import RPi.GPIO as gpio`
-33.  Add these lines to the start of the `def main():` method:
+30.  Our final goal is to explore the potential of voice controlled electronics projects by making changes to the hot word program.
+31.  Connect an LED in series with a resistor between GPIO 14 and ground and between GPIO 15 and ground. <br><img src="images/act-5/pi-blink-diagram.png" alt="blink" style="float:center;width:480px;">
+32.  Install the GPIO library to the Python environment: `sudo pip install RPi.GPIO`
+33.  Edit the hot word file again: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
+34.  Near the top of the file right below the `from` and `import` statements, add the line: `import RPi.GPIO as gpio`
+35.  The GPIO pins need to be assigned as outputs. Make these changes to the start of the `main` method:
      ```
-     gpio.setmode(gpio.BCM)
-     gpio.setup(25, gpio.OUT)
+     def main():
+         gpio.setmode(gpio.BCM)
+         gpio.setup(14, gpio.OUT)
+         gpio.setup(15, gpio.OUT)
+     
+         ...
      ```
-     This sets the GPIO pin numbering to the Broadcom CPU's definitions and assigns pin 25 to be an output.
-34.  Add these lines to the end of the `def process_event(event):` method:
+36.  Ending a conversation after processing a custom event will require access to the `assistant` instance. Change the line where the `process_event` method is defined from `def process_event(event):` to `def process_event(assistant, event):`
+37.  Find the line where `process_event` is called near the bottom of the file and change it from `process_event(event)` to `process_event(assistant, event)`
+38.  The LED connected to GPIO 14 is to be on when the Google assistant is active. Add these lines to the end of `process_event` and make sure to indent them to match the lines above:
      ```
      if event.type == EventType.ON_CONVERSATION_TURN_STARTED:
-         gpio.output(25, gpio.HIGH)
+         gpio.output(14, gpio.HIGH)
 
      if event.type == EventType.ON_CONVERSATION_TURN_STARTED or event.type == EventType.ON_CONVERSATION_TURN_TIMEOUT or event.type == EventType.ON_NO_RESPONSE:
-         gpio.output(25, gpio.LOW)
+         gpio.output(14, gpio.LOW)
      ```
-     Then save and exit.
-35.  When using the hot word program, the LED should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
-36.  
+39.  Immediately after those lines, add these to turn the LED connected to GPIO 15 on or off:
+     ```
+     if event.type == EventType.ON_RECOGNIZING_SPEECH_FINISHED and event.args:
+         text = event.args['text'] # Get the user input as a string.
 
+         if text == 'light on':
+             gpio.output(15, gpio.HIGH)
+             assistant.stop_conversation()
+         elif text == 'light off':
+             gpio.output(15, gpio.LOW)
+             assistant.stop_conversation()
+     ```
+40.  Test the following custom behaviour:
+     -   GPIO 14 should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
+     -   If you say "light on" GPIO 15 will turn on.
+     -   If you say "light off" GPIO 15 will turn off.
+41.  Feel free to experiment. Any action that can be done using Python on a Raspberry Pi could be activated with a voice command!
 
 [NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
