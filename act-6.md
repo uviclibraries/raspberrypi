@@ -64,7 +64,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 
 ## Electronics and Voice Control
 30.  Our final goal is to explore the potential of voice controlled electronics projects by making changes to the hot word program.
-31.  Connect an LED in series with a resistor between GPIO 14 and ground and between GPIO 15 and ground. <br><img src="images/act-6/pi-lights-diagram.png" alt="blink" style="float:center;width:480px;">
+31.  Connect an LED in series with a resistor between GPIO 14 and ground and between GPIO 15 and ground. <br><img src="images/act-6/pi-lights-diagram.png" alt="lights" style="float:center;width:480px;">
 32.  Install the GPIO library to the Python environment: `sudo pip install RPi.GPIO`
 33.  Edit the hot word file again: `sudo nano ~/env/lib/python3.9/site-packages/googlesamples/assistant/library/hotword.py`
 34.  Near the top of the file right below the `from` and `import` statements, add the line: `import RPi.GPIO as gpio`
@@ -105,6 +105,8 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   If you say "light on" GPIO 15 will turn on.
      -   If you say "light off" GPIO 15 will turn off.
 41.  Feel free to experiment. Anything that can normally be done using Python on a Raspberry Pi can be made into a voice command!
-     -   [Google Assistant Library Reference](https://developers.google.com/assistant/sdk/reference/library/python){:target="_blank"}
+     -   This project pairs well with the [activity 5](https://uviclibraries.github.io/raspberrypi/act-5.html){:target="_blank"} speaker circuit. <img src="images/act-6/pi-setup-extra.png" alt="setup" style="float:right;width:360px;">
+     -   See the [Google Assistant Library Reference](https://developers.google.com/assistant/sdk/reference/library/python){:target="_blank"} for a list of Python events that 
+         can be processed.
 
 [NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
