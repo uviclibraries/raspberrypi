@@ -104,9 +104,9 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   GPIO 14 should turn on when you say "Ok Google" and turn off when the Google Assistant is finished talking.
      -   If you say "light on" GPIO 15 will turn on.
      -   If you say "light off" GPIO 15 will turn off.
-41.  Feel free to experiment. Anything that can normally be done using Python on a Raspberry Pi can be made into a voice command!<img src="images/act-6/pi-setup-extra.png" alt="setup" style="float:right;width:360px;">
+41.  Feel free to experiment. Anything that can normally be done using Python on a Raspberry Pi can be made into a voice command!<img src="images/act-6/pi-setup-extra.png" alt="setup" style="float:right;width:200px;">
      -   This project pairs well with the [activity 5](https://uviclibraries.github.io/raspberrypi/act-5.html){:target="_blank"} speaker circuit.
      -   See the [Google Assistant Library Reference](https://developers.google.com/assistant/sdk/reference/library/python){:target="_blank"} for a list of Python events that 
          can be processed.
 
-<br>[NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
+[NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
