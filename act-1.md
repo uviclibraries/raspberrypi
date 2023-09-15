@@ -13,7 +13,8 @@ If you have any questions or get stuck as you work through this in-class exercis
 ## Formatting the SD card and Installing Raspbian
 1.  Open this document in your browser and so that you can click on the hyperlinks in the document: http://bit.ly/2MCdL7r
 2.  Download a copy of the **Raspberry Pi OS with desktop** from the [Raspberry Pi website](https://www.raspberrypi.com/software/operating-systems/){:target="_blank"}
-    -   **Note:** This download will be ~1GB in size. If the download looks like it will take more than 5 minutes, ask your instructor for a thumb drive copy.
+    -   **Note:** This download will be ~1GB in size. If the download looks like it will take more than 5 minutes, ask your instructor if there are any SD cards with an 
+        operating system already installed.
 3.  Install this [Etcher disk imager](https://www.balena.io/etcher/){:target="_blank"} for Windows, Mac, or Linux on your computer.
 4.  Using Etcher, burn the disk image onto the SD card:
     -   If your computer does not have an SD card slot, you can borrow an adapter from the Music and Media desk in the library.
@@ -52,7 +53,7 @@ If you have any questions or get stuck as you work through this in-class exercis
 ## Introduction to Python Programming, Hello World and Nano
 14.  With Python installed, open the terminal and enter: `python3`
     -   A new prompt should show up “**\>\>\>**”. This is the Python shell.
-15.  In here simple Python commands can be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
+15.  Simple Python commands can now be executed. Try entering `x = 5`, then `y = 8`. These variables, x and y, are now set as the values 5 and 8.
      -   Type in `x+y` and press enter
      -   Try some other basic arithmetic commands with these variables!
      -   When you’re done type: `exit()` and press enter.
@@ -74,8 +75,27 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   Navigate to the main menu, and hit **Tab** then **Exit** and reboot the Pi. It should now autoboot
 
 ## Other Important Commands
-20.  Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
-21.  Shut down the Raspberry Pi: `sudo shutdown -h now`
+-   Change Directory: `cd <Path to Directory Here>`
+-   List all files and sub-directories in the current directory: `ls`
+-   Reboot the Raspberry Pi (recommended after installing a system update or large applications): `sudo reboot`
+-   Shut down the Raspberry Pi: `sudo shutdown -h now`
+
+## Useful Terminology
+-   **Linux:** A broad range of computer operating systems including Raspbian that are based on the Linux kernel. Aside from the Raspberry Pi, it is commonly used as an 
+    alternative to Windows or Mac operating systems.
+-   **Directory:** File system structure containing references or links to files and other directories. More often called "folders" in non-technical language.
+-   **Python:** One of the most popular programming languages with an emphasis on human readability and compataibility with many different devices. It is considered "high 
+    level" being abstracted from the deeper workings of computer hardware due to running on an interpreter program.
+-   **Variable:** Represents or holds some value. The value could be numerical or a reference to a more complex object or data structure.
+-   **GPIO**: General purpose input output pins on the Raspberry Pi to interface with outside circuitry.
+-   **CPU:** Central Processing Unit. The central component of any computer for processing data.
+-   **GPU:** Graphics Processing Unit. Generates the graphical output or images seen on a monitor. They often have many processors to complete small parallel tasks
+    extremely quickly. The Raspberry Pi CPU chip contains a minimal GPU for integrated graphics.
+-   **RAM**: Random Access Memory. The variable data for any program running on a computer is stored here. This data is "volatile" meaning it is not retained if the computer 
+    loses power.
+-   **SD Card:** Secure Digital Card. The storage device chosen by the designers of the Raspberry Pi to contain the operating system.
+-   **Flash:** The non-volatile storage memory inside SD cards, USB drives, and the Solid State Drives of more sophisticated computers.
+-   **USB:** Universal Serial Bus. A connector standard for transferring power and data between devices.
 
 <!--
 ## Projects
