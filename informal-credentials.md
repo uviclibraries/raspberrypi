@@ -16,14 +16,18 @@ DSC badges are awarded at the request of workshop participants after a DSC staff
 
 ### UPDATE: Earn an Informal Credential or Badge for WORKSHOP
 
-If you’d like to earn a DSC badge for this workshop, please email the following to: [dscommons@uvic.ca](mailto:dscommons@uvic.ca){:target="_blank"}
+If you’d like to earn a DSC badge for this workshop, please email a picture of Activity 2 Running RetroPi and/or a picture of Activity 4 or 5 Electronics with Raspberry Pi the following to: [dscommons@uvic.ca](mailto:dscommons@uvic.ca){:target="_blank"}
+
 1. Setup the Raspberry Pi hardware and software.
-2. Have a basic understanding of terminal commands to navigate and move files.
-3. Terminal commands for updating and upgrading the Raspberry Pi.
-4. Editing files with Nano.
-5. Cut and paste programming and editing with terminal-based text editors.
-6. Be able to wire simple breadboard circuits with an introductory level understanding of electronics.
-7. Have an understanding of what types of problems can be solved with a Raspberry Pi.
+2. Configure Raspberry Pi graphics settings.
+3. Use RetroPi Controls.
+4. Create a Phython script and edit in Nano.
+5. Manipulate GPIO (general purpose input or output) controls.
+6. Have a basic understanding of terminal commands to navigate and move files.
+7. Make changes with Electronics and voice controls.
+8. Connect microphone and speakers to Raspberry Pi.
+11. Cut and paste programming and editing with terminal-based text editors.
+12. Be able to wire simple breadboard circuits with an introductory level understanding of electronics.
 
 ### Learn how you can share your DSC Badge
 To learn more about DSC badges and how you can share your them on LinkedIn profile, personal website, or resume, check our [DSC Badges webpage](https://onlineacademiccommunity.uvic.ca/dsc/badges/){:target="_blank"}.
