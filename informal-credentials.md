@@ -24,7 +24,6 @@ If you’d like to earn a DSC badge for this workshop, please email the followin
 5. Cut and paste programming and editing with terminal-based text editors.
 6. Be able to wire simple breadboard circuits with an introductory level understanding of electronics.
 7. Have an understanding of what types of problems can be solved with a Raspberry Pi.
-8. Complete one or more of the sample projects.
 
 ### Learn how you can share your DSC Badge
 To learn more about DSC badges and how you can share your them on LinkedIn profile, personal website, or resume, check our [DSC Badges webpage](https://onlineacademiccommunity.uvic.ca/dsc/badges/){:target="_blank"}.
