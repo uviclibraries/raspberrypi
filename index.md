@@ -29,11 +29,5 @@ Participants will be able to know and do the following by the end of this worksh
 8. Connect microphone and speakers to Raspberry Pi.
 11. Cut and paste programming and editing with terminal-based text editors.
 12. Be able to wire simple breadboard circuits with an introductory level understanding of electronics.
-14. Complete one of the following projects
-   - Chromium Kiosk Computer: [https://pimylifeup.com/raspberry-pi-kiosk/](https://pimylifeup.com/raspberry-pi-kiosk/){:target="_blank"}
-   - Spotify Jukebox: [https://pimylifeup.com/raspberry-pi-spotify/](https://pimylifeup.com/raspberry-pi-spotify/){:target="_blank"}
-   - NearbyAirtraffic Tracker: [https://pimylifeup.com/raspberry-pi-flightradar24/](https://pimylifeup.com/raspberry-pi-flightradar24/){:target="_blank"}
-   - Network Wide Ad Blocker: [https://pimylifeup.com/raspberry-pi-pi-hole/](https://pimylifeup.com/raspberry-pi-pi-hole/){:target="_blank"}
-   - Host a Minecraft Server: [https://pimylifeup.com/raspberry-pi-minecraft-server/](https://pimylifeup.com/raspberry-pi-minecraft-server/){:target="_blank"}
      
 <br>[NEXT STEP: Pre-Workshop Activities](pre-workshop.html){: .btn .btn-blue }
