@@ -109,4 +109,4 @@ If you have any questions or get stuck as you work through this in-class exercis
      -   See the [Google Assistant Library Reference](https://developers.google.com/assistant/sdk/reference/library/python){:target="_blank"} for a list of Python events that 
          can be processed.
 
-[NEXT STEP: Earn a Workshop Badge](informal-credentials.html)
+[NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
