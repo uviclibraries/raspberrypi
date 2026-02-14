@@ -6,7 +6,7 @@ parent: Workshop Activities
 ---
 Use raspberry pi to setup your own live stream platform. You could also use it as a fully control remote surveillance camera system.
 
-<img src="images/act-6/logo-6.png" alt="google assistant" style="float:right;width:180px;">
+
 
 # pi-stream
 
@@ -102,28 +102,35 @@ It means that microphone is working.
      env/bin/python -m pip install --upgrade pip setuptools wheel
      source env/bin/activate
      ```
-8.  Paste the code by:
+8.  Paste the code from CSI(ribbon) camera from https://github.com/uviclibraries/raspberrypi/blob/pi-camera/code/app.py and USB camera from https://github.com/uviclibraries/raspberrypi/blob/pi-camera/code/app_usb.py
+   to the Linux editor (nano):
    sudo nano app.py
    or scp sourcecodepath/app.py to raspberrypiworkingdirectory/app.py
+
+
 
 10. Run the code:
     You will see the output like this if everything is good:
      * Serving Flask app "app" (lazy loading)
- * Environment: production
-   WARNING: This is a development server. Do not use it in a production deployment.
-   Use a production WSGI server instead.
- * Debug mode: off
- * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-142.104.149.85 - - [13/Feb/2026 12:20:20] "GET / HTTP/1.1" 200 -
-142.104.149.85 - - [13/Feb/2026 12:20:20] "GET /video_feed HTTP/1.1" 200 -
-142.104.149.85 - - [13/Feb/2026 12:20:22] "GET /audio_feed HTTP/1.1" 200 -
-142.104.149.85 - - [13/Feb/2026 12:20:29] "GET /favicon.ico HTTP/1.1" 404 -
-12. Open the browser and input the url, for instance: http://142.104.149.27:5000/, you will see the live stream:
-    
+     * Environment: production
+      WARNING: This is a development server. Do not use it in a production deployment.
+       Use a production WSGI server instead.
+      * Debug mode: off
+      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+        142.104.149.85 - - [13/Feb/2026 12:20:20] "GET / HTTP/1.1" 200 -
+        142.104.149.85 - - [13/Feb/2026 12:20:20] "GET /video_feed HTTP/1.1" 200 -
+        142.104.149.85 - - [13/Feb/2026 12:20:22] "GET /audio_feed HTTP/1.1" 200 -
+        142.104.149.85 - - [13/Feb/2026 12:20:29] "GET /favicon.ico HTTP/1.1" 404 -
 
-11.  Feel free to experiment. Anything that can normally be done using Python on a Raspberry Pi can be made into a voice command!<img src="images/act-6/pi-setup-extra.png" alt="setup" style="float:right;width:200px;">
-     -   This project pairs well with the [activity 5](https://uviclibraries.github.io/raspberrypi/act-5.html){:target="_blank"} speaker circuit.
-     -   See the [Google Assistant Library Reference](https://developers.google.com/assistant/sdk/reference/library/python){:target="_blank"} for a list of Python events that 
-         can be processed.
+11. Open the browser and input the url, for instance: http://142.104.149.27:5000/, you will see the live stream:
+    <img src="images/act-7/pi_camera_browser_local.png" alt="setup" style="float:right;width:800px;">
+    
+    
+12. With Grok, you can visit the website via the internet from any world in the world: https://untraditional-garfield-gentler.ngrok-free.dev/
+    Open the broswer, you will see the live stream:
+    <img src="images/act-7/pi_camera_browser_ngrok.png" alt="setup" style="float:right;width:800px;">
+    
+12.  Feel free to experiment. Any Raspberry pi supported cameras and microphone used on a Raspberry Pi can be made into a live stream system!<img src="images/act-6/pi-setup-extra.png" alt="setup" style="float:right;width:200px;">
+    
 
 [NEXT STEP: Earn a Workshop Badge](informal-credentials.html){: .btn .btn-blue }
